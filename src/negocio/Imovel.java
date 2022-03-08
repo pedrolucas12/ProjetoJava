@@ -1,6 +1,6 @@
 package negocio;
 
-public class Imovel {
+public abstract class Imovel {
 	private int hospedes;
     private int quartos;
     private int banheiros;
