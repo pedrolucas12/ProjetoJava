@@ -2,19 +2,45 @@ package negocio;
 
 public class Casa extends Imovel {
 	private boolean piscina;
-	private boolean andar;
+	private int andar;
+
+	public Casa(String id, String end, double val, String tit) {
+		this.id = id;
+		this.endereco = end;
+		this.valor = val;
+		this.titulo = tit;
+		
+	}
+	public String toString() {
+		return "A casa: " + titulo + " está no valor de R$" +valor;
+	}
+
+	public void cadastrarCasa() {
+
+	}
+
+	public void alterarCasa() {
+
+	}
+
+	public void deletarCasa() {
+
+	}
+
 	public boolean isPiscina() {
 		return piscina;
 	}
+
 	public void setPiscina(boolean piscina) {
 		this.piscina = piscina;
 	}
-	public boolean isAndar() {
+
+	public int isAndar() {
 		return andar;
 	}
-	public void setAndar(boolean andar) {
+
+	public void setAndar(int andar) {
 		this.andar = andar;
 	}
-	
-	
+
 }

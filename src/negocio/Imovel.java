@@ -1,24 +1,17 @@
 package negocio;
 
 public abstract class Imovel {
-	private int hospedes;
-    private int quartos;
-    private int banheiros;
-    private int camas;
-    private String endereco;
-    private String id;
-    private String titulo;
-    private String descricao;
-    private double valor;
-    private boolean wifi;
-    private boolean garagem;
-    private boolean pets;
-	
+	protected int hospedes;
+    protected int quartos;
+    protected int banheiros;
+    protected int camas;
+    protected String endereco;
+    protected String id;
+    protected String titulo;
+    protected String descricao;
+    protected double valor;
     
-    
-    
-    
-    public int getHospedes() {
+	public int getHospedes() {
 		return hospedes;
 	}
 	public void setHospedes(int hospedes) {
@@ -72,25 +65,8 @@ public abstract class Imovel {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-	public boolean isWifi() {
-		return wifi;
-	}
-	public void setWifi(boolean wifi) {
-		this.wifi = wifi;
-	}
-	public boolean isGaragem() {
-		return garagem;
-	}
-	public void setGaragem(boolean garagem) {
-		this.garagem = garagem;
-	}
-	public boolean isPets() {
-		return pets;
-	}
-	public void setPets(boolean pets) {
-		this.pets = pets;
-	}
+	
     
-    
+     
 
 }
