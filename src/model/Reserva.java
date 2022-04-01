@@ -1,4 +1,4 @@
-package negocio;
+package model;
 
 public class Reserva {
 	private int periodo;

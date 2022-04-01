@@ -1,4 +1,4 @@
-package negocio;
+package model;
 
 public class Casa extends Imovel {
 	private boolean piscina;

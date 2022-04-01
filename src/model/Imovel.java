@@ -1,4 +1,4 @@
-package negocio;
+package model;
 
 public abstract class Imovel {
 	protected int hospedes;

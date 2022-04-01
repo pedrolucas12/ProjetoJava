@@ -1,4 +1,4 @@
-package negocio;
+package model;
 
 public class Apartamento extends Imovel {
 	private boolean elevador;

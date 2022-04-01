@@ -1,8 +1,11 @@
-package negocio;
+package model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Usuario {
+
+	// Atributos Usuario
 	private int cpf;
 	private int telefone;
 	private String nome;
@@ -10,30 +13,17 @@ public class Usuario {
 	private String email;
 	private Date nascimento;
 
+
+	// Construtor
 	
 	public Usuario(String n, String end) {
 		this.nome = n;
 		this.endereco = end;
-	}
-	
-	public String toString() {
-		return "O usuário " + nome + " cadastrou o endereço " +endereco;
-	}
 		
-	public void listarUsuarios() {
-
 	}
 
-	public void cadastrarUsuario() {
-
-	}
-
-	public void deletarUsuario() {
-
-	}
-
-	public void alterarUsuario() {
-
+	public String toString() {
+		return nome;
 	}
 
 	public int getCpf() {
@@ -84,4 +74,7 @@ public class Usuario {
 		this.nascimento = nascimento;
 	}
 
+	
+
+	 
 }
