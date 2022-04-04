@@ -11,15 +11,22 @@ public class Usuario {
 	private String nome;
 	private String endereco;
 	private String email;
-	private Date nascimento;
-
+	// private Date nascimento;
 
 	// Construtor
-	
-	public Usuario(String n, String end) {
+
+	public Usuario(String n, int c, int t, String e, String em) {
 		this.nome = n;
-		this.endereco = end;
-		
+		this.cpf = c;
+		this.telefone = t;
+		this.endereco = e;
+		this.email = em;
+		;
+
+	}
+
+	public Usuario() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String toString() {
@@ -66,15 +73,12 @@ public class Usuario {
 		this.email = email;
 	}
 
-	public Date getNascimento() {
-		return nascimento;
-	}
+	// public Date getNascimento() {
+	// return nascimento;
+	// }
 
-	public void setNascimento(Date nascimento) {
-		this.nascimento = nascimento;
-	}
+	// public void setNascimento(Date nascimento) {
+	// this.nascimento = nascimento;
+	// }
 
-	
-
-	 
 }
