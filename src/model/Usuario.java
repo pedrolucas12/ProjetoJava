@@ -6,8 +6,8 @@ import java.util.Date;
 public class Usuario {
 
 	// Atributos Usuario
-	private int cpf;
-	private int telefone;
+	private String cpf;
+	private String telefone;
 	private String nome;
 	private String endereco;
 	private String email;
@@ -15,7 +15,7 @@ public class Usuario {
 
 	// Construtor
 
-	public Usuario(String n, int c, int t, String e, String em) {
+	public Usuario(String n, String c, String t, String e, String em) {
 		this.nome = n;
 		this.cpf = c;
 		this.telefone = t;
@@ -33,19 +33,19 @@ public class Usuario {
 		return nome;
 	}
 
-	public int getCpf() {
+	public String  getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(String  cpf) {
 		this.cpf = cpf;
 	}
 
-	public int getTelefone() {
+	public String  getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(int telefone) {
+	public void setTelefone(String  telefone) {
 		this.telefone = telefone;
 	}
 

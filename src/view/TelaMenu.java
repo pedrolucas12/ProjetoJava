@@ -47,7 +47,7 @@ public class TelaMenu implements ActionListener {
 
 		
 		if (src == u)
-			new TelaUsuario();
+			new TelaUsuario().Tela();
 
 		if (src == r)
 			new TelaReserva();
