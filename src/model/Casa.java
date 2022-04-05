@@ -8,11 +8,11 @@ public class Casa extends Imovel {
 		this.id = id;
 		this.endereco = end;
 		this.valor = val;
-		this.titulo = tit;
+		this.nome = tit;
 		
 	}
 	public String toString() {
-		return "A casa: " + titulo + " está no valor de R$" +valor;
+		return "A casa: " + nome + " está no valor de R$" +valor;
 	}
 
 	public void cadastrarCasa() {

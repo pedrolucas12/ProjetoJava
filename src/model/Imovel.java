@@ -1,39 +1,38 @@
 package model;
 
 public abstract class Imovel {
-	protected int hospedes;
-    protected int quartos;
-    protected int banheiros;
-    protected int camas;
+	protected int qtdHospedes;
+    protected int qtdQuartos;
+    protected int qtdBanheiros;
+    protected int qtdCamas;
     protected String endereco;
     protected String id;
-    protected String titulo;
+    protected String nome;
     protected String descricao;
     protected double valor;
-    
-	public int getHospedes() {
-		return hospedes;
+	public int getQtdHospedes() {
+		return qtdHospedes;
 	}
-	public void setHospedes(int hospedes) {
-		this.hospedes = hospedes;
+	public void setQtdHospedes(int qtdHospedes) {
+		this.qtdHospedes = qtdHospedes;
 	}
-	public int getQuartos() {
-		return quartos;
+	public int getQtdQuartos() {
+		return qtdQuartos;
 	}
-	public void setQuartos(int quartos) {
-		this.quartos = quartos;
+	public void setQtdQuartos(int qtdQuartos) {
+		this.qtdQuartos = qtdQuartos;
 	}
-	public int getBanheiros() {
-		return banheiros;
+	public int getQtdBanheiros() {
+		return qtdBanheiros;
 	}
-	public void setBanheiros(int banheiros) {
-		this.banheiros = banheiros;
+	public void setQtdBanheiros(int qtdBanheiros) {
+		this.qtdBanheiros = qtdBanheiros;
 	}
-	public int getCamas() {
-		return camas;
+	public int getQtdCamas() {
+		return qtdCamas;
 	}
-	public void setCamas(int camas) {
-		this.camas = camas;
+	public void setQtdCamas(int qtdCamas) {
+		this.qtdCamas = qtdCamas;
 	}
 	public String getEndereco() {
 		return endereco;
@@ -47,11 +46,11 @@ public abstract class Imovel {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getTitulo() {
-		return titulo;
+	public String getNome() {
+		return nome;
 	}
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	public String getDescricao() {
 		return descricao;
@@ -65,6 +64,8 @@ public abstract class Imovel {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
+    
+	
 	
     
      
