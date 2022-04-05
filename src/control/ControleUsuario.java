@@ -33,13 +33,13 @@ public class ControleUsuario {
 		return listaUsuarios.size() + " Usuarios cadastrados";
 	}
 
-	public  String [] getNome(){
-		String [] nomes = new String[listaUsuarios.size()];
-		for(int i=0; i <listaUsuarios.size();i++) {
-			nomes[i]= listaUsuarios.get(i);
-		}
+	//public  String [] getNome(){
+		//String [] nomes = new String[listaUsuarios.size()];
+		//for(int i=0; i <listaUsuarios.size();i++) {
+		//	nomes[i]= listaUsuarios.get(i);
+		//}
 		
-	}
+	//}
 	
 	public ArrayList<Usuario> listarUsuarios() {
 		return listaUsuarios;

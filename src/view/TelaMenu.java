@@ -9,9 +9,9 @@ public class TelaMenu implements ActionListener {
 
 	
 	private static JFrame janela = new JFrame();
-	private static JButton u = new JButton("Usuário");
+	private static JButton u = new JButton("Usuario");
 	private static JButton r = new JButton("Reserva");
-	private static JButton i = new JButton("Imóveis");
+	private static JButton i = new JButton("Imoveis");
 	private static JLabel t = new JLabel("MENU");
 	
 
