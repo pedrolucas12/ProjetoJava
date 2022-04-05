@@ -3,11 +3,11 @@ package view;
 import java.awt.event.*;
 import javax.swing.*;
 
-import control.ControleDados;
+
 
 public class TelaMenu implements ActionListener {
 
-	//private static ControleDados d = new ControleDados();
+	
 	private static JFrame janela = new JFrame();
 	private static JButton u = new JButton("Usuário");
 	private static JButton r = new JButton("Reserva");

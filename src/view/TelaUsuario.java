@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -35,9 +36,11 @@ public class TelaUsuario implements ActionListener {
 	private JTextField tfTelefone = new JTextField();
 	private JTextField tfEndereco = new JTextField();
 	private JButton salvar = new JButton("Salvar");
-	private JButton lista = new JButton("Lista");
+	
+	private JList<String> listaUsuariosCadastrados;
+	
 	ControleUsuario ctu = new ControleUsuario();
-	private JList listaU = new JList();
+	
 
 	public void Tela() {
 		t.setBounds(130, 20, 200, 20);
@@ -56,7 +59,7 @@ public class TelaUsuario implements ActionListener {
 
 		numUsersCadastrados.setBounds(10, 230, 200, 20);
 		salvar.setBounds(70, 200, 90, 30);
-		lista.setBounds(200, 100, 100, 50);
+		
 
 		janela.setSize(400, 300);
 		janela.setVisible(true);
@@ -75,14 +78,18 @@ public class TelaUsuario implements ActionListener {
 		
 
 		janela.add(salvar);
-		janela.add(lista);
+		
 		janela.setLayout(null);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		salvar.addActionListener(this);
+		
+		
+		
 
 	}
 
+	//Funcao que cadastra Usuario
 	public void salvarUsuario() {
 		String nome = tfNome.getText();
 		String cpf = tfCpf.getText();
@@ -97,9 +104,18 @@ public class TelaUsuario implements ActionListener {
 		numUsersCadastrados.setText(ctu.numeroDeUsuarios());
 
 		JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso");
-		System.out.println("FOI");
+		
 	}
 
+	 public void listar() {
+		 ArrayList<Usuario> listaUsuarios = ctu.listarUsuarios();
+
+		 for(int i = 0; i < listaUsuarios.size(); i++) {
+			 
+		 }
+	 }
+	
+	
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 
@@ -107,19 +123,10 @@ public class TelaUsuario implements ActionListener {
 			salvarUsuario();
 
 		}
-		if (src == lista) {
-			ctu.listarUsuarios();
-
-		}
+		
 
 	}
 
-	// public void listar() {
-	// ArrayList<Usuario> listaUsuarios = ctu.listarUsuarios();
-
-	// for(int i = 0; i < listaUsuarios.size(); i++) {
-	// listaU.setValueAt(listaUsuarios.get(i).getNome());
-	// }
-	// }
+	
 
 }
