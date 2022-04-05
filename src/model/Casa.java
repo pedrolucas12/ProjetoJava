@@ -11,8 +11,10 @@ public class Casa extends Imovel {
 		this.nome = tit;
 		
 	}
-	public String toString() {
-		return "A casa: " + nome + " está no valor de R$" +valor;
+	public Casa(String string, double d) {
+    }
+    public String toString() {
+		return "A casa: " + nome + " estï¿½ no valor de R$" +valor;
 	}
 
 	public void cadastrarCasa() {
