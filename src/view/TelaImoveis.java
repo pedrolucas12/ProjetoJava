@@ -1,11 +1,14 @@
 package view;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 
-public class TelaImoveis {
+public class TelaImoveis implements ActionListener{
 	
 	private static JFrame janela = new JFrame();
 	private static JButton c = new JButton("Cadastrar");
@@ -33,4 +36,23 @@ public class TelaImoveis {
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
 	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object src = e.getSource();
+
+		
+		
+		
+	}
+
+
+	
+	
+	
+	
+	
 }
+
+
