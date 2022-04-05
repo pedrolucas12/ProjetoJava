@@ -47,7 +47,7 @@ class Usuario {
     class CRUD{
         public static void main(String[] args){
 
-            list<Usuario> c = new ArrayList<Usuario>();
+            ArrayList<Usuario> c = new ArrayList<Usuario>();
             Scanner s = new Scanner(System.in);
             Scanner s1 = new Scanner(System.in);
             int opcao;

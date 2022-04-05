@@ -7,6 +7,7 @@ import control.ControleDados;
 
 public class TelaMenu implements ActionListener {
 
+	//private static ControleDados d = new ControleDados();
 	private static JFrame janela = new JFrame();
 	private static JButton u = new JButton("Usuário");
 	private static JButton r = new JButton("Reserva");
@@ -46,7 +47,7 @@ public class TelaMenu implements ActionListener {
 
 		
 		if (src == u)
-			new TelaUsuario();
+			new TelaUsuario().Tela();
 
 		if (src == r)
 			new TelaReserva();

@@ -1,27 +1,39 @@
 package control;
 
-
+import java.util.ArrayList;
 
 import model.Usuario;
 
 public class ControleUsuario {
 
-	private Usuario[] listaUsers;
-	private int qtdUsuarios;
+	ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 
-	public ControleUsuario(ControleDados d) {
-		listaUsers = d.getUsuario();
-		qtdUsuarios = d.getQtdUsuarios();
+	public ControleUsuario() {
+
+		Usuario u1 = new Usuario("Fernando", "aa", "aa", "aa", "aa");
+		Usuario u2 = new Usuario("Lucas", "aa", "aa", "aa", "aa");
+		Usuario u3 = new Usuario("Felipe", "aa", "aa", "aa", "aa");
+		Usuario u4 = new Usuario("Pedro", "aa", "aa", "aa", "aa");
+		Usuario u5 = new Usuario("Daniel", "aa", "aa", "aa", "aa");
+		listaUsuarios.add(u1);
+		listaUsuarios.add(u2);
+		listaUsuarios.add(u3);
+		listaUsuarios.add(u4);
+		listaUsuarios.add(u5);
 	}
 
-	public String[] listarNomes() {
-		String[] x = new String[qtdUsuarios];
-		for(int i = 0; i < qtdUsuarios; i++) {
-			x[i] = listaUsers[i].getNome();
-		}
+	
+	public void cadastraUsuario(Usuario u) {
 		
-		return x;
-
+		listaUsuarios.add(u);
 	}
+	
+	public String numeroDeUsuarios() {
+		return listaUsuarios.size() + " Usuarios cadastrados";
+	}
+	
 
+	public ArrayList<Usuario> listarUsuarios() {
+		return listaUsuarios;
+	}
 }
