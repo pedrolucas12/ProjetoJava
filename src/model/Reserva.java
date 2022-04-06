@@ -39,7 +39,7 @@ public class Reserva {
 
 	
 	/** 
-	 * @return funcao para saber o que é o periodo
+	 * @return funcao para saber o que e o periodo
 	 */
 	public int getPeriodo() {
 		return periodo;
@@ -47,7 +47,7 @@ public class Reserva {
 
 	
 	/** 
-	 * @param funcao para definir o que é periodo
+	 * @param funcao para definir o que e periodo
 	 */
 	public void setPeriodo(int periodo) {
 		this.periodo = periodo;
@@ -55,7 +55,7 @@ public class Reserva {
 
 	
 	/** 
-	 * @return funcao para saber o que é checkin
+	 * @return funcao para saber o que e checkin
 	 */
 	public String getCheckin() {
 		return checkin;
@@ -71,7 +71,7 @@ public class Reserva {
 
 	
 	/** 
-	 * @return funcao para saber o que é checkout
+	 * @return funcao para saber o que e checkout
 	 */
 	public String getCheckout() {
 		return checkout;

@@ -1,25 +1,19 @@
 package model;
 
 /** 
-	 * @return Faz a declaração das variações
+	 * @return Faz a declaracao das variacoes
 	 */
 public class Apartamento extends Imovel {
 	private boolean elevador;
 	private boolean varanda;
 	private boolean condominio;
 
-<<<<<<< HEAD
 /** 
-	 * @return Define o que é apartamento
+	 * @return Define o que e apartamento
 	 */
 	public Apartamento(String n, String id, String end, double val,  String des, 
 			int h, int q, int b, int c, boolean ele, boolean var, boolean con) {
 		
-=======
-	public Apartamento(String n, String id, String end, double val, String des, int h, int q, int b, int c, boolean ele,
-			boolean var, boolean con) {
-
->>>>>>> be55cc846c362b6858b45a0911df57e08598d2dd
 		this.nome = n;
 		this.id = id;
 		this.endereco = end;
@@ -32,28 +26,14 @@ public class Apartamento extends Imovel {
 		this.elevador = ele;
 		this.varanda = var;
 		this.condominio = con;
-<<<<<<< HEAD
 }
-/** 
+	/** 
 	 * @return Resume o apartamento somente com nome e valor
 	 */
-=======
-	}
-
->>>>>>> be55cc846c362b6858b45a0911df57e08598d2dd
 	public Apartamento(String n, double val) {
 		this.nome = n;
 		this.valor = val;
 	}
-
-	
-	/** 
-	 * @return Apresenta o valor do apartamento
-	 */
-	public String toString() {
-		return "O apartamento: " + nome + " est� no valor de R$" + valor;
-	}
-
 	
 	/** 
 	 * @return Funcao para saber se tem elevador 

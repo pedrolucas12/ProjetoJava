@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /** 
-	 * @return Define o que é o usuario
+	 * @return Define o que e o usuario
 	 */
 public class Usuario {
 
@@ -44,7 +44,7 @@ public class Usuario {
 
 	
 	/** 
-	 * @return funcao para saber o que é o cpf
+	 * @return funcao para saber o que e o cpf
 	 */
 	public String  getCpf() {
 		return cpf;
@@ -52,7 +52,7 @@ public class Usuario {
 
 	
 	/** 
-	 * @param define o que é o CPF
+	 * @param define o que e o CPF
 	 */
 	public void setCpf(String  cpf) {
 		this.cpf = cpf;
@@ -60,7 +60,7 @@ public class Usuario {
 
 	
 	/** 
-	 * @return funcao para saber o que é o telefone
+	 * @return funcao para saber o que e o telefone
 	 */
 	public String  getTelefone() {
 		return telefone;
@@ -68,7 +68,7 @@ public class Usuario {
 
 	
 	/** 
-	 * @param define o que é o telefone
+	 * @param define o que e o telefone
 	 */
 	public void setTelefone(String  telefone) {
 		this.telefone = telefone;
@@ -76,7 +76,7 @@ public class Usuario {
 
 	
 	/** 
-	 * @return funcao para saber o que é o nome
+	 * @return funcao para saber o que e o nome
 	 */
 	public String getNome() {
 		return nome;
@@ -84,7 +84,7 @@ public class Usuario {
 
 	
 	/** 
-	 * @param define o que é o nome
+	 * @param define o que e o nome
 	 */
 	public void setNome(String nome) {
 		this.nome = nome;
@@ -92,7 +92,7 @@ public class Usuario {
 
 	
 	/** 
-	 * @return funcao para saber o que é endereco
+	 * @return funcao para saber o que e endereco
 	 */
 	public String getEndereco() {
 		return endereco;
@@ -100,7 +100,7 @@ public class Usuario {
 
 	
 	/** 
-	 * @param define o que é endereco
+	 * @param define o que e endereco
 	 */
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
@@ -108,7 +108,7 @@ public class Usuario {
 
 	
 	/** 
-	 * @return funcao para saber o que é o email
+	 * @return funcao para saber o que e o email
 	 */
 	public String getEmail() {
 		return email;
@@ -116,7 +116,7 @@ public class Usuario {
 
 	
 	/** 
-	 * @param define o que é o email
+	 * @param define o que e o email
 	 */
 	public void setEmail(String email) {
 		this.email = email;
