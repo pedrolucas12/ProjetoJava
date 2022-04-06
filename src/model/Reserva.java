@@ -1,5 +1,8 @@
 package model;
 
+/** 
+	 * @return Apresenta as variaveis da reserva
+	 */
 public class Reserva {
 	private int periodo;
 	private String checkin;
@@ -13,8 +16,12 @@ public class Reserva {
 		this.codigo = cod;
 	}
 	
+	
+	/** 
+	 * @return Espaco para trazer as funcoes da reserva
+	 */
 	public String toString() {
-		return "A reserva do código " + codigo + " está reservada no período de " +periodo + " dias. ";
+		return "A reserva do cï¿½digo " + codigo + " estï¿½ reservada no perï¿½odo de " +periodo + " dias. ";
 				
 	}
 	
@@ -30,34 +37,66 @@ public class Reserva {
 
 	}
 
+	
+	/** 
+	 * @return funcao para saber o que Ã© o periodo
+	 */
 	public int getPeriodo() {
 		return periodo;
 	}
 
+	
+	/** 
+	 * @param funcao para definir o que Ã© periodo
+	 */
 	public void setPeriodo(int periodo) {
 		this.periodo = periodo;
 	}
 
+	
+	/** 
+	 * @return funcao para saber o que Ã© checkin
+	 */
 	public String getCheckin() {
 		return checkin;
 	}
 
+	
+	/** 
+	 * @param funcao para definir o Checkin
+	 */
 	public void setCheckin(String checkin) {
 		this.checkin = checkin;
 	}
 
+	
+	/** 
+	 * @return funcao para saber o que Ã© checkout
+	 */
 	public String getCheckout() {
 		return checkout;
 	}
 
+	
+	/** 
+	 * @param funcao para definir o checkout
+	 */
 	public void setCheckout(String checkout) {
 		this.checkout = checkout;
 	}
 
+	
+	/** 
+	 * @return funcao para saber se tem codigo
+	 */
 	public int getCodigo() {
 		return codigo;
 	}
 
+	
+	/** 
+	 * @param funcao para definir o codigo
+	 */
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}

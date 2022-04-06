@@ -28,5 +28,4 @@ public class ControlCasa {
 	public void cadastraCasa(Casa c) {
 		listaCasas.add(c);
 	}
-}
 

@@ -3,6 +3,9 @@ package model;
 import java.util.ArrayList;
 import java.util.Date;
 
+/** 
+	 * @return Define o que é o usuario
+	 */
 public class Usuario {
 
 	// Atributos Usuario
@@ -14,7 +17,9 @@ public class Usuario {
 	// private Date nascimento;
 
 	// Construtor
-
+/** 
+	 * @return Metodo Construtor
+	 */
 	public Usuario(String n, String c, String t, String e, String em) {
 		this.nome = n;
 		this.cpf = c;
@@ -29,46 +34,90 @@ public class Usuario {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	/** 
+	 * @return funcao para retornar o nome
+	 */
 	public String toString() {
 		return nome;
 	}
 
+	
+	/** 
+	 * @return funcao para saber o que é o cpf
+	 */
 	public String  getCpf() {
 		return cpf;
 	}
 
+	
+	/** 
+	 * @param define o que é o CPF
+	 */
 	public void setCpf(String  cpf) {
 		this.cpf = cpf;
 	}
 
+	
+	/** 
+	 * @return funcao para saber o que é o telefone
+	 */
 	public String  getTelefone() {
 		return telefone;
 	}
 
+	
+	/** 
+	 * @param define o que é o telefone
+	 */
 	public void setTelefone(String  telefone) {
 		this.telefone = telefone;
 	}
 
+	
+	/** 
+	 * @return funcao para saber o que é o nome
+	 */
 	public String getNome() {
 		return nome;
 	}
 
+	
+	/** 
+	 * @param define o que é o nome
+	 */
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
+	
+	/** 
+	 * @return funcao para saber o que é endereco
+	 */
 	public String getEndereco() {
 		return endereco;
 	}
 
+	
+	/** 
+	 * @param define o que é endereco
+	 */
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
 
+	
+	/** 
+	 * @return funcao para saber o que é o email
+	 */
 	public String getEmail() {
 		return email;
 	}
 
+	
+	/** 
+	 * @param define o que é o email
+	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
