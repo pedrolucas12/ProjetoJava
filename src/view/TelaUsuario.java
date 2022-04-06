@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ListModel;
 import javax.swing.ListSelectionModel;
@@ -37,12 +38,19 @@ public class TelaUsuario implements ActionListener {
 	private JTextField tfEndereco = new JTextField();
 	private JButton salvar = new JButton("Salvar");
 	
-	private JList<String> listaUsuariosCadastrados;
+	private JList<String> listaUsuariosCadastrados = new JList<String>();
 	
-	ControleUsuario ctu = new ControleUsuario();
+	private static ControleUsuario ctu ;
 	
 
-	public void Tela() {
+	public void Tela(ControleUsuario cont) {
+		ctu = cont;
+		
+		listaUsuariosCadastrados.setListData(ctu.getListaNomes());
+		JScrollPane scrollPane = new JScrollPane();
+		
+		
+		scrollPane.setBounds(220,50, 250,250);
 		t.setBounds(130, 20, 200, 20);
 
 		n.setBounds(10, 50, 100, 20);
@@ -61,7 +69,7 @@ public class TelaUsuario implements ActionListener {
 		salvar.setBounds(70, 200, 90, 30);
 		
 
-		janela.setSize(400, 300);
+		janela.setSize(500, 400);
 		janela.setVisible(true);
 		janela.add(tfNome);
 		janela.add(tfCpf);
@@ -81,10 +89,11 @@ public class TelaUsuario implements ActionListener {
 		
 		janela.setLayout(null);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		janela.add(scrollPane);
 		
 		salvar.addActionListener(this);
 		
-		
+		scrollPane.setViewportView(listaUsuariosCadastrados);
 		
 
 	}
@@ -121,6 +130,8 @@ public class TelaUsuario implements ActionListener {
 
 		if (src == salvar) {
 			salvarUsuario();
+			listaUsuariosCadastrados.setListData(ctu.getListaNomes());
+			listaUsuariosCadastrados.updateUI();
 
 		}
 		

@@ -23,30 +23,30 @@ public class ControleUsuario {
 		listaUsuarios.add(u5);
 
 	}
-	
-	//Funcao que cadastra um Usuario a ArrayList de Usuarios
+
+	// Funcao que cadastra um Usuario a ArrayList de Usuarios
 	public void cadastraUsuario(Usuario u) {
 		listaUsuarios.add(u);
 	}
-	//Funcao que retorna a quantidade de Usuarios que estao cadastrados
+
+	// Funcao que retorna a quantidade de Usuarios que estao cadastrados
 	public String numeroDeUsuarios() {
 		return listaUsuarios.size() + " Usuarios cadastrados";
 	}
 
-	//public  String [] getNome(){
-		//String [] nomes = new String[listaUsuarios.size()];
-		//for(int i=0; i <listaUsuarios.size();i++) {
-		//	nomes[i]= listaUsuarios.get(i);
-		//}
-		
-	//}
-	
+	//Funcao que cria lista de nomes
+	public String[] getListaNomes() {
+		String[] nomes = new String[listaUsuarios.size()];
+		int i = 0;
+		for (Usuario usuario : listarUsuarios()) {
+			nomes[i] = usuario.getNome();
+			i++;
+		}
+		return nomes;
+	}
+
 	public ArrayList<Usuario> listarUsuarios() {
 		return listaUsuarios;
 	}
-
-	
-
-	
 
 }
