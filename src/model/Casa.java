@@ -4,14 +4,14 @@ public class Casa extends Imovel {
 	private boolean piscina;
 	private int andar;
 
-	public Casa(String id, String end, double val, String tit) {
-		this.id = id;
-		this.endereco = end;
+	public Casa(String nome, double val) {
+		this.nome = nome;
 		this.valor = val;
-		this.nome = tit;
+		
 		
 	}
-	public Casa(String string, double d) {
+	public Casa() {
+		
     }
     public String toString() {
 		return "A casa: " + nome + " est� no valor de R$" +valor;

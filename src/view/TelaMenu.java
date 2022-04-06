@@ -3,6 +3,8 @@ package view;
 import java.awt.event.*;
 import javax.swing.*;
 
+import control.ControlApartamento;
+import control.ControlCasa;
 import control.ControleUsuario;
 
 
@@ -16,7 +18,8 @@ public class TelaMenu implements ActionListener {
 	private static JButton i = new JButton("Imoveis");
 	private static JLabel t = new JLabel("MENU");
 	private static ControleUsuario ctu = new ControleUsuario();
-	
+	private static ControlApartamento cta = new ControlApartamento();
+	private static ControlCasa ctc = new ControlCasa();
 
 	//Construtor
 	public TelaMenu() {
@@ -56,6 +59,6 @@ public class TelaMenu implements ActionListener {
 			new TelaReserva();
 
 		if (src == i)
-			new TelaImoveis();
+			new TelaImoveis().Tela(cta,ctc);
 	}
 }

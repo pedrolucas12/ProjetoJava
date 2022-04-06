@@ -5,9 +5,9 @@ public class Apartamento extends Imovel {
 	private boolean varanda;
 	private boolean condominio;
 
-	public Apartamento(String n, String id, String end, double val,  String des, 
-			int h, int q, int b, int c, boolean ele, boolean var, boolean con) {
-		
+	public Apartamento(String n, String id, String end, double val, String des, int h, int q, int b, int c, boolean ele,
+			boolean var, boolean con) {
+
 		this.nome = n;
 		this.id = id;
 		this.endereco = end;
@@ -20,13 +20,12 @@ public class Apartamento extends Imovel {
 		this.elevador = ele;
 		this.varanda = var;
 		this.condominio = con;
-}
+	}
+
 	public Apartamento(String n, double val) {
 		this.nome = n;
 		this.valor = val;
 	}
-	
-	
 
 	public String toString() {
 		return "O apartamento: " + nome + " está no valor de R$" + valor;
