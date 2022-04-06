@@ -8,9 +8,7 @@ public class Apartamento extends Imovel {
 	private boolean varanda;
 	private boolean condominio;
 
-/** 
-	 * @return Define o que e apartamento
-	 */
+
 	public Apartamento(String n, String id, String end, double val,  String des, 
 			int h, int q, int b, int c, boolean ele, boolean var, boolean con) {
 		
@@ -43,12 +41,10 @@ public class Apartamento extends Imovel {
 	}
 
 	
-	/** 
-	 * @param Funcao para definir elevador
-	 */
 	public void setElevador(boolean elevador) {
 		this.elevador = elevador;
 	}
+
 
 	
 	/** 

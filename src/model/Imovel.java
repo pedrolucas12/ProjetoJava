@@ -1,6 +1,6 @@
 package model;
 /** 
-	 * @return Define o que é imovel
+	 * @return Define o que e imovel
 	 */
 public abstract class Imovel {
 	protected int qtdHospedes;

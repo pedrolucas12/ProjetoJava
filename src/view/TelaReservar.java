@@ -26,7 +26,7 @@ public class TelaReservar implements ActionListener {
 	private JTextField tfUsuario = new JTextField();
 	
 	//private static ControleUsuario ctu = new ControleUsuario();
-//private static ControlApartamento cta = new ControlApartamento();
+	//private static ControlApartamento cta = new ControlApartamento();
 	//private static ControlCasa ctc = new ControlCasa();
 	
 	public TelaReservar() {
