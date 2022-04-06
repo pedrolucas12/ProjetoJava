@@ -8,7 +8,9 @@ import control.ControlCasa;
 import control.ControleUsuario;
 
 
-
+	/** 
+	 * @param Declara e configura toda a tela de menu
+	 */
 public class TelaMenu implements ActionListener {
 
 	
@@ -37,6 +39,10 @@ public class TelaMenu implements ActionListener {
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
+	
+	/** 
+	 * @param coloca funcao nos botoes
+	 */
 	//Main
 	public static void main(String[] args) {
 
@@ -48,6 +54,10 @@ public class TelaMenu implements ActionListener {
 
 	}
 
+	
+	/** 
+	 * @param armazena a lista
+	 */
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 
