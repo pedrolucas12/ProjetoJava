@@ -23,12 +23,17 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 	private static JLabel ap = new JLabel("Apartamentos");
 	private static JButton btnReservarCs = new JButton("Reservar casa");
 	private static JLabel ca = new JLabel("Casas");
+	private static JButton btnExcluirApt = new JButton("Excluir apartamento");
+	private static JButton btnExcluirCs = new JButton("Excluir casa");
+	private static JButton btnAlterarApt = new JButton("Alterar apartamento");
+	private static JButton btnAlterarCs = new JButton("Alterar casa");
 	private JList<String> listaAptCadastrados = new JList<String>();
 	private JList<String> listaCasasCadastradas = new JList<String>();
 
 	private static ControlApartamento cta;
 	private static ControlCasa ctc;
-	
+
+	private static int i;
 
 	public void Tela(ControlApartamento conta, ControlCasa contc) {
 		cta = conta;
@@ -36,11 +41,10 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 
 		listaAptCadastrados.setListData(cta.getListaNomesApt());
 		JScrollPane scrollPaneApt = new JScrollPane();
-		
+
 		listaCasasCadastradas.setListData(ctc.getListaNomesCasa());
 		JScrollPane scrollPaneCasa = new JScrollPane();
 
-		
 		scrollPaneApt.setBounds(20, 50, 250, 300);
 		scrollPaneCasa.setBounds(300, 50, 250, 300);
 
@@ -48,9 +52,19 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		ap.setBounds(100, 5, 100, 40);
 		btnReservarCs.setBounds(330, 360, 200, 40);
 		ca.setBounds(400, 5, 100, 40);
-		janela.setSize(600, 500);
+
+		btnExcluirApt.setBounds(40, 420, 200, 40);
+		btnAlterarApt.setBounds(40, 480, 200, 40);
+		btnExcluirCs.setBounds(330, 420, 200, 40);
+		btnAlterarCs.setBounds(330, 480, 200, 40);
+
+		janela.setSize(600, 600);
 		janela.setVisible(true);
 
+		janela.add(btnExcluirApt);
+		janela.add(btnAlterarApt);
+		janela.add(btnExcluirCs);
+		janela.add(btnAlterarCs);
 		janela.add(btnReservarAp);
 		janela.add(ap);
 		janela.add(btnReservarCs);
@@ -63,23 +77,64 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		janela.add(listaAptCadastrados);
 		scrollPaneApt.setViewportView(listaAptCadastrados);
 		listaAptCadastrados.addListSelectionListener(this);
-		
+
 		janela.add(listaCasasCadastradas);
 		scrollPaneCasa.setViewportView(listaCasasCadastradas);
 		listaCasasCadastradas.addListSelectionListener(this);
 
+		btnReservarAp.addActionListener(this);
+		btnReservarCs.addActionListener(this);
+		btnExcluirApt.addActionListener(this);
+		btnExcluirCs.addActionListener(this);
+		btnAlterarApt.addActionListener(this);
+		btnAlterarCs.addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 
+		if (src == btnReservarAp) {
+
+		}
+		if (src == btnReservarCs) {
+
+		}
+		if (src == btnExcluirApt) {
+			if (i >= 0) {
+				cta.getLista().remove(i);
+				listaAptCadastrados.setListData(cta.getListaNomesApt());
+				listaAptCadastrados.updateUI();
+
+			}
+		}
+		if (src == btnExcluirCs) {
+			if (i >= 0) {
+				ctc.getLista().remove(i);
+				listaCasasCadastradas.setListData(ctc.getListaNomesCasa());
+				listaCasasCadastradas.updateUI();
+
+			}
+		}
+		if (src == btnAlterarApt) {
+
+		}
+		if (src == btnAlterarCs) {
+
+		}
+
 	}
 
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
-		// TODO Auto-generated method stub
+		Object src = e.getSource();
 
+		if (src == listaAptCadastrados) {
+			i = listaAptCadastrados.getSelectedIndex();
+		}
+		if (src == listaCasasCadastradas) {
+			i = listaCasasCadastradas.getSelectedIndex();
+		}
 	}
 
 }

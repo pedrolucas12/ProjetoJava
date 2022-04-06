@@ -138,7 +138,7 @@ public class TelaUsuario implements ActionListener, ListSelectionListener {
 			listaUsuariosCadastrados.updateUI();
 		}
 		if (src == excluir) {
-			System.out.println(i);
+			
 			if (i >= 0 ) {
 				ctu.listarUsuarios().remove(i);
 				listaUsuariosCadastrados.setListData(ctu.getListaNomes());
