@@ -15,12 +15,14 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ListModel;
 import javax.swing.ListSelectionModel;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 import control.ControleUsuario;
 
 import model.Usuario;
 
-public class TelaUsuario implements ActionListener {
+public class TelaUsuario implements ActionListener, ListSelectionListener {
 
 	private JFrame janela = new JFrame();
 	private JLabel t = new JLabel("Cadastrar Usuario");
@@ -37,20 +39,21 @@ public class TelaUsuario implements ActionListener {
 	private JTextField tfTelefone = new JTextField();
 	private JTextField tfEndereco = new JTextField();
 	private JButton salvar = new JButton("Salvar");
-	
+	private JButton excluir = new JButton("Excluir");
+	private JButton alterar = new JButton("Alterar");
+
 	private JList<String> listaUsuariosCadastrados = new JList<String>();
-	
-	private static ControleUsuario ctu ;
-	
+
+	private static ControleUsuario ctu;
+	int i;
 
 	public void Tela(ControleUsuario cont) {
 		ctu = cont;
-		
+
 		listaUsuariosCadastrados.setListData(ctu.getListaNomes());
 		JScrollPane scrollPane = new JScrollPane();
-		
-		
-		scrollPane.setBounds(220,50, 250,250);
+
+		scrollPane.setBounds(220, 50, 250, 250);
 		t.setBounds(130, 20, 200, 20);
 
 		n.setBounds(10, 50, 100, 20);
@@ -67,7 +70,8 @@ public class TelaUsuario implements ActionListener {
 
 		numUsersCadastrados.setBounds(10, 230, 200, 20);
 		salvar.setBounds(70, 200, 90, 30);
-		
+		excluir.setBounds(230, 320, 90, 30);
+		alterar.setBounds(350, 320, 90, 30);
 
 		janela.setSize(500, 400);
 		janela.setVisible(true);
@@ -83,22 +87,25 @@ public class TelaUsuario implements ActionListener {
 		janela.add(numUsersCadastrados);
 		janela.add(tfTelefone);
 		janela.add(tfEndereco);
-		
 
 		janela.add(salvar);
-		
+		janela.add(excluir);
+		janela.add(alterar);
+
 		janela.setLayout(null);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.add(scrollPane);
-		
+
 		salvar.addActionListener(this);
-		
+		excluir.addActionListener(this);
+
+		listaUsuariosCadastrados.addListSelectionListener(this);
+
 		scrollPane.setViewportView(listaUsuariosCadastrados);
-		
 
 	}
 
-	//Funcao que cadastra Usuario
+	// Funcao que cadastra Usuario
 	public void salvarUsuario() {
 		String nome = tfNome.getText();
 		String cpf = tfCpf.getText();
@@ -114,17 +121,14 @@ public class TelaUsuario implements ActionListener {
 
 		JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso");
 		
+		tfNome.setText("");
+		tfCpf.setText("");
+		tfEmail.setText("");
+		tfEndereco.setText("");
+		tfTelefone.setText("");
+
 	}
 
-	 public void listar() {
-		 ArrayList<Usuario> listaUsuarios = ctu.listarUsuarios();
-
-		 for(int i = 0; i < listaUsuarios.size(); i++) {
-			 
-		 }
-	 }
-	
-	
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 
@@ -132,12 +136,33 @@ public class TelaUsuario implements ActionListener {
 			salvarUsuario();
 			listaUsuariosCadastrados.setListData(ctu.getListaNomes());
 			listaUsuariosCadastrados.updateUI();
+		}
+		if (src == excluir) {
+			System.out.println(i);
+			if (i >= 0 ) {
+				ctu.listarUsuarios().remove(i);
+				listaUsuariosCadastrados.setListData(ctu.getListaNomes());
+				listaUsuariosCadastrados.updateUI();
+
+			}
+			
+		}
+		if (src == alterar) {
 
 		}
-		
 
 	}
 
-	
+	@Override
+	public void valueChanged(ListSelectionEvent e) {
+		Object src = e.getSource();
+
+		if (src == listaUsuariosCadastrados) {
+			i = listaUsuariosCadastrados.getSelectedIndex();
+			
+			
+		}
+
+	}
 
 }

@@ -8,12 +8,18 @@ public class Apartamento extends Imovel {
 	private boolean varanda;
 	private boolean condominio;
 
+<<<<<<< HEAD
 /** 
 	 * @return Define o que é apartamento
 	 */
 	public Apartamento(String n, String id, String end, double val,  String des, 
 			int h, int q, int b, int c, boolean ele, boolean var, boolean con) {
 		
+=======
+	public Apartamento(String n, String id, String end, double val, String des, int h, int q, int b, int c, boolean ele,
+			boolean var, boolean con) {
+
+>>>>>>> be55cc846c362b6858b45a0911df57e08598d2dd
 		this.nome = n;
 		this.id = id;
 		this.endereco = end;
@@ -26,16 +32,19 @@ public class Apartamento extends Imovel {
 		this.elevador = ele;
 		this.varanda = var;
 		this.condominio = con;
+<<<<<<< HEAD
 }
 /** 
 	 * @return Resume o apartamento somente com nome e valor
 	 */
+=======
+	}
+
+>>>>>>> be55cc846c362b6858b45a0911df57e08598d2dd
 	public Apartamento(String n, double val) {
 		this.nome = n;
 		this.valor = val;
 	}
-	
-	
 
 	
 	/** 
