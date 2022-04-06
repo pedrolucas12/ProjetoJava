@@ -23,6 +23,9 @@ public class TelaMenu implements ActionListener {
 	private static ControlApartamento cta = new ControlApartamento();
 	private static ControlCasa ctc = new ControlCasa();
 
+	/** 
+	 * @param Funcao que constroi a tela menu
+	 */
 	//Construtor
 	public TelaMenu() {
 		t.setBounds(150, 10, 150, 40);
@@ -41,7 +44,7 @@ public class TelaMenu implements ActionListener {
 	
 	
 	/** 
-	 * @param coloca funcao nos botoes
+	 * @param coloca funcao main
 	 */
 	//Main
 	public static void main(String[] args) {
@@ -56,7 +59,7 @@ public class TelaMenu implements ActionListener {
 
 	
 	/** 
-	 * @param armazena a lista
+	 * @param funcoes dos botoes
 	 */
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
