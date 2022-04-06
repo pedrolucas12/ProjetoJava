@@ -95,10 +95,12 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		Object src = e.getSource();
 
 		if (src == btnReservarAp) {
+			new TelaReservar();
 
 		}
 		if (src == btnReservarCs) {
-
+			new TelaReservar();
+			
 		}
 		if (src == btnExcluirApt) {
 			if (i >= 0) {
