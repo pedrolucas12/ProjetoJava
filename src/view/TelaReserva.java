@@ -72,7 +72,7 @@ public class TelaReserva implements ActionListener, ListSelectionListener {
 		janela.add(scrollPaneCo);
 		janela.add(scrollPaneI);
 		janela.setLayout(null);
-		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		janela.add(listaUsuarioReserva);
 		janela.add(listaCheckinReserva);

@@ -93,7 +93,7 @@ public class TelaUsuario implements ActionListener, ListSelectionListener {
 		janela.add(alterar);
 
 		janela.setLayout(null);
-		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.add(scrollPane);
 
 		salvar.addActionListener(this);

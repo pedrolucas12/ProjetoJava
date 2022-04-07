@@ -24,11 +24,11 @@ public class TelaCadastroImovel implements ActionListener {
 	private static JLabel end = new JLabel("Endereco");
 	private static JLabel nome = new JLabel("Nome");
 	private static JLabel val = new JLabel("Valor diaria");
-	private static JLabel ele = new JLabel("Possui elevador?");
-	private static JLabel var = new JLabel("Possui varanda?");
-	private static JLabel con = new JLabel("Possui condominio?");
+	private static JLabel ele = new JLabel("Possui elevador? (s/n)");
+	private static JLabel var = new JLabel("Possui varanda? (s/n)");
+	private static JLabel con = new JLabel("Possui condominio? (s/n)");
 	private static JLabel and = new JLabel("Quantos andares?");
-	private static JLabel pis = new JLabel("Possui piscina?");
+	private static JLabel pis = new JLabel("Possui piscina? (s/n)");
 	private JTextField tfH = new JTextField();
 	private JTextField tfB = new JTextField();
 	private JTextField tfQ = new JTextField();
@@ -91,7 +91,7 @@ public class TelaCadastroImovel implements ActionListener {
 		janela.add(salvarCs);
 
 		janela.setLayout(null);
-		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	}
 
@@ -147,7 +147,7 @@ public class TelaCadastroImovel implements ActionListener {
 		salvarCs.addActionListener(this);
 
 		janela.setLayout(null);
-		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 	public void CadastrarApt() {

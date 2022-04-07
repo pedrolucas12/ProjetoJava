@@ -4,12 +4,24 @@ package model;
  * @return Define os atributos
  */
 public class Casa extends Imovel {
-	private boolean piscina;
+	private char piscina;
 	private int andar;
 
-	public Casa(String nome, double val) {
-		this.nome = nome;
+	public Casa(String n,  String end, double val,  int h, int q, int b, int c, 
+			char pis, int and) {
+
+		this.nome = n;
+
+		this.endereco = end;
 		this.valor = val;
+
+		this.qtdHospedes = h;
+		this.qtdBanheiros = b;
+		this.qtdCamas = c;
+		this.qtdQuartos = q;
+		this.piscina = pis;;
+		this.andar = and;
+		
 
 	}
 

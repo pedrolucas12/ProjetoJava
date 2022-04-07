@@ -9,11 +9,11 @@ public class ControlCasa {
 	ArrayList<Casa> listaCasas = new ArrayList<Casa>();
 
 	public ControlCasa() {
-		Casa c1 = new Casa("Casa Fortaleza", 105.0);
-		Casa c2 = new Casa("Casa Santa Catarina", 905.0);
-		Casa c3 = new Casa("Casa Itacare", 505.0);
-		Casa c4 = new Casa("Casa Ouro Preto", 150.0);
-		Casa c5 = new Casa("Casa Santos", 308.0);
+		Casa c1 = new Casa("Casa Fortaleza", "Rua 5",105.0, 1,1,1,1, 's', 2);
+		Casa c2 = new Casa("Casa Santa Catarina", "Rua 5",100.0, 1,1,1,1, 's', 2);
+		Casa c3 = new Casa("Casa Itacare", "Rua 5",205.0, 1,1,1,1, 's', 2);
+		Casa c4 = new Casa("Casa Ouro Preto", "Rua 5",120.0, 1,1,1,1, 's', 2);
+		Casa c5 = new Casa("Casa Santos", "Rua 5",185.0, 1,1,1,1, 's', 2);
 
 		listaCasas.add(c1);
 		listaCasas.add(c2);

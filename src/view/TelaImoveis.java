@@ -78,7 +78,7 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		janela.add(scrollPaneApt);
 		janela.add(scrollPaneCasa);
 		janela.setLayout(null);
-		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		janela.add(listaAptCadastrados);
 		scrollPaneApt.setViewportView(listaAptCadastrados);

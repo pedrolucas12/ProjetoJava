@@ -73,7 +73,7 @@ public class TelaReservar implements ActionListener  {
 		janela.add(tfApt);
 		janela.add(salvar);
 		janela.setLayout(null);
-		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		salvar.addActionListener(this);
 
@@ -127,6 +127,7 @@ public class TelaReservar implements ActionListener  {
 
 		if (src == salvar) {
 			salvarReservaApt();
+			new TelaMenu();
 		}
 
 	}
