@@ -1,13 +1,22 @@
 package view;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-public class TelaCadastroImovel {
+import control.ControlApartamento;
+import control.ControleUsuario;
+import model.Apartamento;
+
+public class TelaCadastroImovel implements ActionListener {
 	private static JFrame janela = new JFrame();
-	private static JButton salvar = new JButton("Salvar");
+	private static JButton salvarAp = new JButton("Salvar apartamento");
+	private static JButton salvarCs = new JButton("Salvar casa");
 
 	private static JLabel qtdH = new JLabel("Quantidade de hospedes");
 	private static JLabel qtdB = new JLabel("Quantidade de banheiros");
@@ -21,7 +30,7 @@ public class TelaCadastroImovel {
 	private static JLabel con = new JLabel("Possui condominio?");
 	private static JLabel and = new JLabel("Quantos andares?");
 	private static JLabel pis = new JLabel("Possui piscina?");
-	private JTextField tfH= new JTextField();
+	private JTextField tfH = new JTextField();
 	private JTextField tfB = new JTextField();
 	private JTextField tfQ = new JTextField();
 	private JTextField tfC = new JTextField();
@@ -33,7 +42,8 @@ public class TelaCadastroImovel {
 	private JTextField tfVar = new JTextField();
 	private JTextField tfAnd = new JTextField();
 	private JTextField tfPis = new JTextField();
-	
+
+	private static ControlApartamento cta;
 
 	public void CadastroCasa() {
 		qtdH.setBounds(20, 10, 150, 20);
@@ -54,9 +64,8 @@ public class TelaCadastroImovel {
 		tfAnd.setBounds(250, 110, 150, 20);
 		pis.setBounds(250, 130, 150, 20);
 		tfPis.setBounds(250, 150, 150, 20);
-		
-		salvar.setBounds(270,190,100, 30);
-		
+
+		salvarCs.setBounds(270, 190, 100, 30);
 
 		janela.setSize(500, 300);
 		janela.setVisible(true);
@@ -69,7 +78,7 @@ public class TelaCadastroImovel {
 		janela.add(val);
 		janela.add(pis);
 		janela.add(and);
-		
+
 		janela.add(tfH);
 		janela.add(tfB);
 		janela.add(tfQ);
@@ -79,13 +88,12 @@ public class TelaCadastroImovel {
 		janela.add(tfVal);
 		janela.add(tfPis);
 		janela.add(tfAnd);
-		
-		janela.add(salvar);
-		
+
+		janela.add(salvarCs);
 
 		janela.setLayout(null);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 	}
 
 	public void CadastroApartamento() {
@@ -110,8 +118,7 @@ public class TelaCadastroImovel {
 		tfCon.setBounds(250, 150, 150, 20);
 		var.setBounds(250, 170, 150, 20);
 		tfVar.setBounds(250, 190, 150, 20);
-		salvar.setBounds(160,220,100, 30);
-		
+		salvarAp.setBounds(160, 220, 100, 30);
 
 		janela.setSize(500, 300);
 		janela.setVisible(true);
@@ -135,11 +142,62 @@ public class TelaCadastroImovel {
 		janela.add(tfEle);
 		janela.add(tfVar);
 		janela.add(tfCon);
-		janela.add(salvar);
+		janela.add(salvarAp);
 		
+		salvarAp.addActionListener(this);
+		salvarCs.addActionListener(this);
 
 		janela.setLayout(null);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+	public void CadastrarApt() {
+		String sqtdHospedes = tfH.getText();
+		int qtdHospedes = Integer.parseInt(sqtdHospedes);
+		String sqtdQuartos = tfQ.getText();
+		int qtdQuartos = Integer.parseInt(sqtdQuartos);
+		String sqtdCamas = tfC.getText();
+		int qtdCamas = Integer.parseInt(sqtdCamas);
+		String sqtdBanheiros = tfB.getText();
+		int qtdBanheiros = Integer.parseInt(sqtdBanheiros);
+		String endereco = tfEnd.getText();
+		String nome = tfNome.getText();
+		String sValor = tfVal.getText();
+		double valor = Double.parseDouble(sValor);
+		String sElevador = tfEle.getText();
+		char elevador = sElevador.charAt(0);
+		String sCondominio = tfCon.getText();
+		char condominio = sCondominio.charAt(0);
+		String sVaranda = tfVar.getText();
+		char varanda = sVaranda.charAt(0);
+
+		Apartamento a = new Apartamento(nome, endereco, valor, qtdHospedes, qtdBanheiros, qtdCamas, qtdQuartos,
+				elevador, varanda, condominio);
+
+		cta.cadastraApartamento(a);
+
+		JOptionPane.showMessageDialog(null, "Apartamento cadastrado com sucesso");
+
+		tfNome.setText("");
+		tfEnd.setText("");
+		tfQ.setText("");
+		tfC.setText("");
+		tfB.setText("");
+		tfH.setText("");
+		tfEle.setText("");
+		tfCon.setText("");
+		tfVal.setText("");
+		tfVar.setText("");
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object src = e.getSource();
+
+		if (src == salvarAp) {
+			CadastrarApt();
+		}
+
 	}
 
 }

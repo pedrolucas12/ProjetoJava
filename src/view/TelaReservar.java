@@ -7,14 +7,19 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 import control.ControlApartamento;
 import control.ControlCasa;
 import control.ControleUsuario;
+import model.Apartamento;
+import model.Reserva;
+import model.Usuario;
 
-public class TelaReservar implements ActionListener {
+public class TelaReservar implements ActionListener, ListSelectionListener {
 
-	
+	int i = 0;
 	private static JFrame janela = new JFrame();
 	private static JButton salvar = new JButton("Salvar Reserva");
 
@@ -24,6 +29,7 @@ public class TelaReservar implements ActionListener {
 	private JTextField tfCheckin = new JTextField();
 	private JTextField tfCheckout = new JTextField();
 	private JTextField tfUsuario = new JTextField();
+	private static TelaImoveis ti = new TelaImoveis();
 	
 	//private static ControleUsuario ctu = new ControleUsuario();
 	//private static ControlApartamento cta = new ControlApartamento();
@@ -58,11 +64,33 @@ public class TelaReservar implements ActionListener {
 	}
 	
 	
+	public void salvarReservaApt() {
+		ti.valueChanged();
+		
+		String checkin = tfCheckin.getText();
+		String checkout = tfCheckout.getText();
+		Usuario usuario = tfUsuario.Usuario.getNome();
+		Apartamento apt = 
+		
+
+		Reserva reserva = new Reserva(checkin, checkout, usuario, apt);
+	}
 	
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		Object src = e.getSource();
+		
+	}
+
+
+	@Override
+	public void valueChanged(ListSelectionEvent e) {
+		Object src = e.getSource();
+		
+		if(src == ti.valueChanged()) {
+			 i = ti.retornaListaApt().getSelectedIndex();
+		}
 		
 	}
 

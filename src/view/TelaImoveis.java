@@ -98,12 +98,22 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		btnCadastrarCs.addActionListener(this);
 	}
 
+	public JList<String> retornaListaApt() {
+
+		int p = i;
+		return listaAptCadastrados;
+
+	}
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 
 		if (src == btnReservarAp) {
 			new TelaReservar();
+			if (i >= 0) {
+				cta.getLista().get(i);
+			}
 
 		}
 		if (src == btnReservarCs) {
@@ -147,6 +157,8 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 
 		if (src == listaAptCadastrados) {
 			i = listaAptCadastrados.getSelectedIndex();
+			retornaListaApt();
+
 		}
 		if (src == listaCasasCadastradas) {
 			i = listaCasasCadastradas.getSelectedIndex();

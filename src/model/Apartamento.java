@@ -1,22 +1,21 @@
 package model;
 
-/** 
-	 * @return Faz a declaracao das variacoes
-	 */
+/**
+ * @return Faz a declaracao das variacoes
+ */
 public class Apartamento extends Imovel {
-	private boolean elevador;
-	private boolean varanda;
-	private boolean condominio;
+	private char elevador;
+	private char varanda;
+	private char condominio;
 
+	public Apartamento(String n,  String end, double val,  int h, int q, int b, int c, 
+			char ele, char var, char con) {
 
-	public Apartamento(String n, String id, String end, double val,  String des, 
-			int h, int q, int b, int c, boolean ele, boolean var, boolean con) {
-		
 		this.nome = n;
-		this.id = id;
+
 		this.endereco = end;
 		this.valor = val;
-		this.descricao = des;
+
 		this.qtdHospedes = h;
 		this.qtdBanheiros = b;
 		this.qtdCamas = c;
@@ -24,58 +23,40 @@ public class Apartamento extends Imovel {
 		this.elevador = ele;
 		this.varanda = var;
 		this.condominio = con;
-}
-	/** 
+	}
+
+	/**
 	 * @return Resume o apartamento somente com nome e valor
 	 */
 	public Apartamento(String n, double val) {
 		this.nome = n;
 		this.valor = val;
 	}
-	
-	/** 
-	 * @return Funcao para saber se tem elevador 
-	 */
-	public boolean isElevador() {
+
+	public char getElevador() {
 		return elevador;
 	}
 
-	
-	public void setElevador(boolean elevador) {
+	public void setElevador(char elevador) {
 		this.elevador = elevador;
 	}
 
-
-	
-	/** 
-	 * @return Funcao para saber se tem varanda
-	 */
-	public boolean isVaranda() {
+	public char getVaranda() {
 		return varanda;
 	}
 
-	
-	/** 
-	 * @param Funcao para definir varanda
-	 */
-	public void setVaranda(boolean varanda) {
+	public void setVaranda(char varanda) {
 		this.varanda = varanda;
 	}
 
-	
-	/** 
-	 * @return Funcao para saber se tem condominio
-	 */
-	public boolean isCondominio() {
+	public char getCondominio() {
 		return condominio;
 	}
 
-	
-	/** 
-	 * @param Funcao para saber se tem condominio
-	 */
-	public void setCondominio(boolean condominio) {
+	public void setCondominio(char condominio) {
 		this.condominio = condominio;
 	}
+
+	
 
 }
