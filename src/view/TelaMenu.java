@@ -18,6 +18,7 @@ public class TelaMenu implements ActionListener {
 	private static JButton u = new JButton("Usuario");
 	private static JButton r = new JButton("Reserva");
 	private static JButton i = new JButton("Imoveis");
+	
 	private static JLabel t = new JLabel("MENU");
 	private static ControleUsuario ctu = new ControleUsuario();
 	private static ControlApartamento cta = new ControlApartamento();
@@ -32,6 +33,7 @@ public class TelaMenu implements ActionListener {
 		u.setBounds(130, 60, 100, 40);
 		r.setBounds(130, 120, 100, 40);
 		i.setBounds(130, 180, 100, 40);
+		
 		janela.setSize(400, 300);
 		janela.setVisible(true);
 		janela.add(u);
@@ -73,5 +75,7 @@ public class TelaMenu implements ActionListener {
 
 		if (src == i)
 			new TelaImoveis().Tela(cta,ctc);
+		
+		
 	}
 }

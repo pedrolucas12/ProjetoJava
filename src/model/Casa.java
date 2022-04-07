@@ -7,18 +7,11 @@ public class Casa extends Imovel {
 	private boolean piscina;
 	private int andar;
 
-
-	public Casa(String id, String end, double val, String tit) {
-		this.id = id;
-		this.endereco = end;
-	}
-
 	public Casa(String nome, double val) {
 		this.nome = nome;
 		this.valor = val;
 
 	}
-
 
 	/**
 	 * @return funcao para saber se tem piscina

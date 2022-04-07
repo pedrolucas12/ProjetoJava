@@ -27,6 +27,8 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 	private static JButton btnExcluirCs = new JButton("Excluir casa");
 	private static JButton btnAlterarApt = new JButton("Alterar apartamento");
 	private static JButton btnAlterarCs = new JButton("Alterar casa");
+	private static JButton btnCadastrarApt = new JButton("Cadastrar apartamento");
+	private static JButton btnCadastrarCs = new JButton("Cadastrar casa");
 	private JList<String> listaAptCadastrados = new JList<String>();
 	private JList<String> listaCasasCadastradas = new JList<String>();
 
@@ -57,8 +59,10 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		btnAlterarApt.setBounds(40, 480, 200, 40);
 		btnExcluirCs.setBounds(330, 420, 200, 40);
 		btnAlterarCs.setBounds(330, 480, 200, 40);
+		btnCadastrarApt.setBounds(40, 540, 200, 40);
+		btnCadastrarCs.setBounds(330, 540, 200, 40);
 
-		janela.setSize(600, 600);
+		janela.setSize(600, 650);
 		janela.setVisible(true);
 
 		janela.add(btnExcluirApt);
@@ -66,6 +70,8 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		janela.add(btnExcluirCs);
 		janela.add(btnAlterarCs);
 		janela.add(btnReservarAp);
+		janela.add(btnCadastrarCs);
+		janela.add(btnCadastrarApt);
 		janela.add(ap);
 		janela.add(btnReservarCs);
 		janela.add(ca);
@@ -88,6 +94,8 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		btnExcluirCs.addActionListener(this);
 		btnAlterarApt.addActionListener(this);
 		btnAlterarCs.addActionListener(this);
+		btnCadastrarApt.addActionListener(this);
+		btnCadastrarCs.addActionListener(this);
 	}
 
 	@Override
@@ -100,7 +108,7 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		}
 		if (src == btnReservarCs) {
 			new TelaReservar();
-			
+
 		}
 		if (src == btnExcluirApt) {
 			if (i >= 0) {
@@ -123,6 +131,12 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		}
 		if (src == btnAlterarCs) {
 
+		}
+		if (src == btnCadastrarApt) {
+			new TelaCadastroImovel().CadastroApartamento();
+		}
+		if (src == btnCadastrarCs) {
+			new TelaCadastroImovel().CadastroCasa();
 		}
 
 	}
