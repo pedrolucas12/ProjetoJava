@@ -13,12 +13,13 @@ import javax.swing.event.ListSelectionListener;
 
 import control.ControlApartamento;
 import control.ControlCasa;
+import control.ControlReserva;
 import control.ControleUsuario;
 import model.Apartamento;
 import model.Reserva;
 import model.Usuario;
 
-public class TelaReservar implements ActionListener, ListSelectionListener {
+public class TelaReservar implements ActionListener  {
 
 	int i = 0;
 	private static JFrame janela = new JFrame();
@@ -39,6 +40,7 @@ public class TelaReservar implements ActionListener, ListSelectionListener {
 	private static ControleUsuario ctu = new ControleUsuario();
 	private static ControlApartamento cta = new ControlApartamento();
 	private static ControlCasa ctc = new ControlCasa();
+	private static ControlReserva ctr = new ControlReserva();
 
 	private static String listaU[];
 	private static String listaA[];
@@ -89,11 +91,11 @@ public class TelaReservar implements ActionListener, ListSelectionListener {
 		x = 0;
 
 		for (int i = 0; i < listaU.length; i++) {
-			// String u = listaU[i];
+			
 
 			if (sUsuario.equalsIgnoreCase(listaU[i])) {
 				x = 1;
-				//JOptionPane.showMessageDialog(null, "achou ");
+				
 				break;
 			}
 
@@ -102,7 +104,8 @@ public class TelaReservar implements ActionListener, ListSelectionListener {
 		if (x == 1) {
 			for (int i = 0; i < listaA.length; i++) {
 				if (sApt.equalsIgnoreCase(listaA[i])) {
-					Reserva reserva = new Reserva(sUsuario, checkin, checkout, sApt);
+					Reserva r = new Reserva(sUsuario, checkin, checkout, sApt);
+					ctr.cadastraReserva(r);
 					JOptionPane.showMessageDialog(null, "Reserva feita com sucesso!");
 					y = 1;
 					break;
@@ -128,10 +131,6 @@ public class TelaReservar implements ActionListener, ListSelectionListener {
 
 	}
 
-	@Override
-	public void valueChanged(ListSelectionEvent e) {
-		Object src = e.getSource();
-
-	}
+	
 
 }

@@ -18,6 +18,32 @@ public class Reserva {
 		this.imovel = i;
 
 	}
+	
+	
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+
+
+	public String getImovel() {
+		return imovel;
+	}
+
+
+
+	public void setImovel(String imovel) {
+		this.imovel = imovel;
+	}
+
+
 
 	/**
 	 * @return funcao para saber o que e checkin
