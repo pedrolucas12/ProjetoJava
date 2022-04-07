@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -26,26 +27,38 @@ public class TelaReservar implements ActionListener, ListSelectionListener {
 	private static JLabel checkin = new JLabel(" Data Check-in:");
 	private static JLabel checkout = new JLabel("Data Check-out:");
 	private static JLabel usuario = new JLabel("Usuario:");
+	private static JLabel apt = new JLabel("Apartamento:");
 	private JTextField tfCheckin = new JTextField();
 	private JTextField tfCheckout = new JTextField();
 	private JTextField tfUsuario = new JTextField();
+	private JTextField tfApt = new JTextField();
 	private static TelaImoveis ti = new TelaImoveis();
-	
-	//private static ControleUsuario ctu = new ControleUsuario();
-	//private static ControlApartamento cta = new ControlApartamento();
-	//private static ControlCasa ctc = new ControlCasa();
-	
+	private static Usuario u;
+	private static Apartamento a;
+
+	private static ControleUsuario ctu = new ControleUsuario();
+	private static ControlApartamento cta = new ControlApartamento();
+	private static ControlCasa ctc = new ControlCasa();
+
+	private static String listaU[];
+	private static String listaA[];
+
+	private static int x;
+	private static int y;
+
 	public TelaReservar() {
 		checkin.setBounds(20, 30, 100, 40);
 		checkout.setBounds(20, 70, 100, 40);
-		usuario.setBounds(20,110,100,40);
+		usuario.setBounds(20, 110, 100, 40);
+		apt.setBounds(20, 150, 100, 40);
+
 		tfCheckin.setBounds(130, 40, 100, 20);
 		tfCheckout.setBounds(130, 80, 100, 20);
 		tfUsuario.setBounds(130, 120, 100, 20);
-		
-		
-		salvar.setBounds(90, 180, 150, 40);
-		
+		tfApt.setBounds(130, 160, 100, 20);
+
+		salvar.setBounds(90, 210, 150, 30);
+
 		janela.setSize(400, 300);
 		janela.setVisible(true);
 		janela.add(checkin);
@@ -54,45 +67,71 @@ public class TelaReservar implements ActionListener, ListSelectionListener {
 		janela.add(tfUsuario);
 		janela.add(tfCheckin);
 		janela.add(tfCheckout);
+		janela.add(apt);
+		janela.add(tfApt);
 		janela.add(salvar);
 		janela.setLayout(null);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		
-		
-		
+
+		salvar.addActionListener(this);
+
 	}
-	
-	
+
 	public void salvarReservaApt() {
-		ti.valueChanged();
-		
+
 		String checkin = tfCheckin.getText();
 		String checkout = tfCheckout.getText();
-		Usuario usuario = tfUsuario.Usuario.getNome();
-		Apartamento apt = 
-		
+		String sUsuario = tfUsuario.getText();
+		String sApt = tfApt.getText();
 
-		Reserva reserva = new Reserva(checkin, checkout, usuario, apt);
+		listaU = ctu.getListaNomes();
+		listaA = cta.getListaNomesApt();
+		x = 0;
+
+		for (int i = 0; i < listaU.length; i++) {
+			// String u = listaU[i];
+
+			if (sUsuario.equalsIgnoreCase(listaU[i])) {
+				x = 1;
+				//JOptionPane.showMessageDialog(null, "achou ");
+				break;
+			}
+
+		}
+		
+		if (x == 1) {
+			for (int i = 0; i < listaA.length; i++) {
+				if (sApt.equalsIgnoreCase(listaA[i])) {
+					Reserva reserva = new Reserva(sUsuario, checkin, checkout, sApt);
+					JOptionPane.showMessageDialog(null, "Reserva feita com sucesso!");
+					y = 1;
+					break;
+
+				}
+			}
+
+		}else {
+			JOptionPane.showMessageDialog(null, "Usuario nao encontrado");
+		}
+		if(y != 1) {
+			JOptionPane.showMessageDialog(null, "Apartamento nao encontrado");
+		}
 	}
-	
-	
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
-		
-	}
 
+		if (src == salvar) {
+			salvarReservaApt();
+		}
+
+	}
 
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
 		Object src = e.getSource();
-		
-		if(src == ti.valueChanged()) {
-			 i = ti.retornaListaApt().getSelectedIndex();
-		}
-		
+
 	}
 
-	
 }

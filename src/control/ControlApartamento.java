@@ -10,11 +10,11 @@ public class ControlApartamento {
 	ArrayList<Apartamento> listaApartamentos = new ArrayList<Apartamento>();
 
 	public ControlApartamento() {
-		Apartamento a1 = new Apartamento("Apartamento Brasilia", 10.0);
-		Apartamento a2 = new Apartamento("Apartamento Balneario", 90.0);
-		Apartamento a3 = new Apartamento("Apartamento Curitiba", 50.0);
-		Apartamento a4 = new Apartamento("Apartamento Goiania", 150.0);
-		Apartamento a5 = new Apartamento("Apartamento Sao Paulo", 300.0);
+		Apartamento a1 = new Apartamento("Apartamento Brasilia", "SQSW", 10.0, 2,2,2,2, 's','s','s');
+		Apartamento a2 = new Apartamento("Apartamento Balneario","SQSW", 90.0, 2,2,2,2, 's','s','s');
+		Apartamento a3 = new Apartamento("Apartamento Curitiba", "SQSW",50.0, 2,2,2,2, 's','s','s');
+		Apartamento a4 = new Apartamento("Apartamento Goiania", "SQSW",150.0, 2,2,2,2, 's','s','s');
+		Apartamento a5 = new Apartamento("Apartamento Sao Paulo", "SQSW",300.0, 2,2,2,2, 's','s','s');
 
 		listaApartamentos.add(a1);
 		listaApartamentos.add(a2);

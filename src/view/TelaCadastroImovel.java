@@ -10,7 +10,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import control.ControlApartamento;
-import control.ControleUsuario;
 import model.Apartamento;
 
 public class TelaCadastroImovel implements ActionListener {
@@ -152,6 +151,8 @@ public class TelaCadastroImovel implements ActionListener {
 	}
 
 	public void CadastrarApt() {
+		
+		
 		String sqtdHospedes = tfH.getText();
 		int qtdHospedes = Integer.parseInt(sqtdHospedes);
 		String sqtdQuartos = tfQ.getText();
@@ -171,10 +172,10 @@ public class TelaCadastroImovel implements ActionListener {
 		String sVaranda = tfVar.getText();
 		char varanda = sVaranda.charAt(0);
 
-		Apartamento a = new Apartamento(nome, endereco, valor, qtdHospedes, qtdBanheiros, qtdCamas, qtdQuartos,
+		Apartamento ap = new Apartamento(nome, endereco, valor, qtdHospedes, qtdBanheiros, qtdCamas, qtdQuartos,
 				elevador, varanda, condominio);
 
-		cta.cadastraApartamento(a);
+		cta.cadastraApartamento(ap);
 
 		JOptionPane.showMessageDialog(null, "Apartamento cadastrado com sucesso");
 
@@ -196,6 +197,7 @@ public class TelaCadastroImovel implements ActionListener {
 
 		if (src == salvarAp) {
 			CadastrarApt();
+			//new TelaMenu();
 		}
 
 	}

@@ -25,13 +25,7 @@ public class Apartamento extends Imovel {
 		this.condominio = con;
 	}
 
-	/**
-	 * @return Resume o apartamento somente com nome e valor
-	 */
-	public Apartamento(String n, double val) {
-		this.nome = n;
-		this.valor = val;
-	}
+	
 
 	public char getElevador() {
 		return elevador;

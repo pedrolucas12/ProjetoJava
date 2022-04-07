@@ -7,10 +7,10 @@ public class Reserva {
 
 	private String checkin;
 	private String checkout;
-	private Usuario usuario;
-	private Imovel imovel;
+	private String usuario;
+	private String imovel;
 
-	public Reserva(Usuario u, String cin, String cou, Imovel i) {
+	public Reserva(String u, String cin, String cou, String i) {
 
 		this.checkin = cin;
 		this.checkout = cou;
