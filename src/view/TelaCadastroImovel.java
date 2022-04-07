@@ -10,7 +10,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import control.ControlApartamento;
+import control.ControlCasa;
 import model.Apartamento;
+import model.Casa;
 
 public class TelaCadastroImovel implements ActionListener {
 	private static JFrame janela = new JFrame();
@@ -43,6 +45,7 @@ public class TelaCadastroImovel implements ActionListener {
 	private JTextField tfPis = new JTextField();
 
 	private static ControlApartamento cta;
+	private static ControlCasa ctc;
 
 	public void CadastroCasa() {
 		qtdH.setBounds(20, 10, 150, 20);
@@ -64,7 +67,7 @@ public class TelaCadastroImovel implements ActionListener {
 		pis.setBounds(250, 130, 150, 20);
 		tfPis.setBounds(250, 150, 150, 20);
 
-		salvarCs.setBounds(270, 190, 100, 30);
+		salvarCs.setBounds(270, 190, 150, 30);
 
 		janela.setSize(500, 300);
 		janela.setVisible(true);
@@ -89,9 +92,10 @@ public class TelaCadastroImovel implements ActionListener {
 		janela.add(tfAnd);
 
 		janela.add(salvarCs);
+		salvarCs.addActionListener(this);
 
 		janela.setLayout(null);
-		//janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	}
 
@@ -142,17 +146,16 @@ public class TelaCadastroImovel implements ActionListener {
 		janela.add(tfVar);
 		janela.add(tfCon);
 		janela.add(salvarAp);
-		
+
 		salvarAp.addActionListener(this);
-		salvarCs.addActionListener(this);
+		
 
 		janela.setLayout(null);
-		//janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 	public void CadastrarApt() {
-		
-		
+
 		String sqtdHospedes = tfH.getText();
 		int qtdHospedes = Integer.parseInt(sqtdHospedes);
 		String sqtdQuartos = tfQ.getText();
@@ -191,15 +194,55 @@ public class TelaCadastroImovel implements ActionListener {
 		tfVar.setText("");
 	}
 
+	public void CadastrarCasa() {
+		String sqtdHospedes = tfH.getText();
+		int qtdHospedes = Integer.parseInt(sqtdHospedes);
+		String sqtdQuartos = tfQ.getText();
+		int qtdQuartos = Integer.parseInt(sqtdQuartos);
+		String sqtdCamas = tfC.getText();
+		int qtdCamas = Integer.parseInt(sqtdCamas);
+		String sqtdBanheiros = tfB.getText();
+		int qtdBanheiros = Integer.parseInt(sqtdBanheiros);
+		String endereco = tfEnd.getText();
+		String nome = tfNome.getText();
+		String sValor = tfVal.getText();
+		double valor = Double.parseDouble(sValor);
+		String sPiscina = tfPis.getText();
+		char piscina = sPiscina.charAt(0);
+		String sqtdAndares = tfAnd.getText();
+		int qtdAndar = Integer.parseInt(sqtdAndares);
+
+		Casa cs = new Casa(nome, endereco, valor, qtdHospedes, qtdBanheiros, qtdCamas, qtdQuartos, piscina, qtdAndar);
+
+		ctc.cadastraCasa(cs);
+
+		JOptionPane.showMessageDialog(null, "Casa cadastrada com sucesso");
+
+		tfNome.setText("");
+		tfEnd.setText("");
+		tfQ.setText("");
+		tfC.setText("");
+		tfB.setText("");
+		tfH.setText("");
+		tfAnd.setText("");
+		tfPis.setText("");
+		tfVal.setText("");
+
+	}
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 
 		if (src == salvarAp) {
 			CadastrarApt();
-			//new TelaMenu();
+			new TelaMenu();
 		}
+		if (src == salvarCs) {
+			CadastrarCasa();
+			new TelaMenu();
 
+		}
 	}
 
 }

@@ -25,19 +25,19 @@ public class Casa extends Imovel {
 
 	}
 
-	/**
-	 * @return funcao para saber se tem piscina
-	 */
-	public boolean isPiscina() {
+	
+
+	public char getPiscina() {
 		return piscina;
 	}
 
-	/**
-	 * @param funcao para definir piscina
-	 */
-	public void setPiscina(boolean piscina) {
+
+
+	public void setPiscina(char piscina) {
 		this.piscina = piscina;
 	}
+
+
 
 	/**
 	 * @return funcao para saber quantos andares
