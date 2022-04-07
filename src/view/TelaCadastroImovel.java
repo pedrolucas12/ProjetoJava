@@ -38,17 +38,15 @@ public class TelaCadastroImovel {
 	public void CadastroApartamento() {
 
 		qtdH.setBounds(10, 50, 100, 20);
-		h.setBounds(10, 80, 100, 20);
+		tfH.setBounds(10, 80, 100, 20);
 		qtdB.setBounds(10, 110, 100, 20);
-		b.setBounds(10, 140, 100, 20);
-		end.setBounds(10, 170, 100, 20);
-
-		tfNome.setBounds(70, 50, 100, 20);
+		tfB.setBounds(10, 140, 100, 20);
+		qtdQ.setBounds(10, 170, 100, 20);
+		tfQ.setBounds(70, 50, 100, 20);
 		tfCpf.setBounds(70, 80, 100, 20);
 		tfEmail.setBounds(70, 110, 100, 20);
 		tfEndereco.setBounds(70, 170, 100, 20);
 		tfTelefone.setBounds(70, 140, 100, 20);
-
 		numUsersCadastrados.setBounds(10, 230, 200, 20);
 		salvar.setBounds(70, 200, 90, 30);
 		excluir.setBounds(230, 320, 90, 30);
@@ -56,22 +54,21 @@ public class TelaCadastroImovel {
 
 		janela.setSize(500, 400);
 		janela.setVisible(true);
-		janela.add(tfNome);
-		janela.add(tfCpf);
-		janela.add(tfEmail);
-		janela.add(t);
-		janela.add(c);
-		janela.add(e);
-		janela.add(n);
-		janela.add(tel);
-		janela.add(end);
-		janela.add(numUsersCadastrados);
-		janela.add(tfTelefone);
-		janela.add(tfEndereco);
-
-		janela.add(salvar);
-		janela.add(excluir);
-		janela.add(alterar);
+		janela.add(qtdH);
+		janela.add();
+		janela.add();
+		janela.add();
+		janela.add();
+		janela.add();
+		janela.add();
+		janela.add();
+		janela.add();
+		janela.add();
+		janela.add();
+		janela.add();
+		janela.add();
+		janela.add();
+		janela.add();
 
 		janela.setLayout(null);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
