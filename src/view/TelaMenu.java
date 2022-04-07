@@ -5,6 +5,7 @@ import javax.swing.*;
 
 import control.ControlApartamento;
 import control.ControlCasa;
+import control.ControlReserva;
 import control.ControleUsuario;
 
 
@@ -23,6 +24,7 @@ public class TelaMenu implements ActionListener {
 	private static ControleUsuario ctu = new ControleUsuario();
 	private static ControlApartamento cta = new ControlApartamento();
 	private static ControlCasa ctc = new ControlCasa();
+	private static ControlReserva ctr = new ControlReserva();
 
 	/** 
 	 * @param Funcao que constroi a tela menu
@@ -71,7 +73,7 @@ public class TelaMenu implements ActionListener {
 			new TelaUsuario().Tela(ctu);
 
 		if (src == r)
-			new TelaReserva();
+			new TelaReserva(ctr);
 
 		if (src == i)
 			new TelaImoveis().Tela(cta,ctc);

@@ -46,4 +46,34 @@ public class ControlReserva {
 			}
 			return usuariosReservas;
 		}
+		
+		public String[] getListaCheckinReserva() {
+			String[] checkinReservas = new String[listaReservas.size()];
+			int i = 0;
+			for (Reserva r : getListaReservas()) {
+				checkinReservas[i] = r.getCheckin();
+				i++;
+			}
+			return checkinReservas;
+		}
+		
+		public String[] getListaImovelReserva() {
+			String[] imovelReservas = new String[listaReservas.size()];
+			int i = 0;
+			for (Reserva r : getListaReservas()) {
+				imovelReservas[i] = r.getImovel();
+				i++;
+			}
+			return imovelReservas;
+		}
+		
+		public String[] getListaCheckoutReserva() {
+			String[] checkout = new String[listaReservas.size()];
+			int i = 0;
+			for (Reserva r : getListaReservas()) {
+				checkout[i] = r.getCheckout();
+				i++;
+			}
+			return checkout;
+		}
 }
