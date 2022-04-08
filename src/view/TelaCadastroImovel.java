@@ -47,6 +47,10 @@ public class TelaCadastroImovel implements ActionListener {
 	private static ControleApartamento cta = new ControleApartamento();
 	private static ControleCasa ctc = new ControleCasa();
 
+
+	/** 
+	 * @param Funcao que monta a tela de cadastro de Casa
+	 */
 	public void CadastroCasa() {
 		qtdH.setBounds(20, 10, 150, 20);
 		tfH.setBounds(20, 30, 150, 20);
@@ -98,7 +102,9 @@ public class TelaCadastroImovel implements ActionListener {
 		// janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	}
-
+	/** 
+	 * @param Funcao que cadastra Apartamento
+	 */
 	public void CadastroApartamento() {
 
 		qtdH.setBounds(20, 10, 150, 20);
@@ -154,6 +160,9 @@ public class TelaCadastroImovel implements ActionListener {
 		// janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
+	/** 
+	 * @param Funcao que monta a tela de cadastro de Apartamento
+	 */
 	public void CadastrarApt() {
 
 		String sqtdHospedes = tfH.getText();
@@ -194,6 +203,9 @@ public class TelaCadastroImovel implements ActionListener {
 		tfVar.setText("");
 	}
 
+	/** 
+	 * @param Funcao que cadastra Casa
+	 */
 	public void CadastrarCasa() {
 		String sqtdHospedes = tfH.getText();
 		int qtdHospedes = Integer.parseInt(sqtdHospedes);
@@ -230,6 +242,10 @@ public class TelaCadastroImovel implements ActionListener {
 
 	}
 
+	
+	/** 
+	 * @param Funcao que retorna funcao de cadastro depedendo do botao clicado
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();

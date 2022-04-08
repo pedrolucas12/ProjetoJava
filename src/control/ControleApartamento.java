@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import model.Apartamento;
 import model.Usuario;
 
+	/** 
+	 * @param Construtor da classe controleApartamento
+	 */
 public class ControleApartamento {
 
 	ArrayList<Apartamento> listaApartamentos = new ArrayList<Apartamento>();
@@ -24,17 +27,25 @@ public class ControleApartamento {
 
 	}
 
-	// Funcao que cadastra um apt a ArrayList de apt
+	
+	/** 
+	 * @param Funcao que cadastra um apartamento a ArrayList de apartamentos
+	 */
 	public void cadastraApartamento(Apartamento a) {
 		listaApartamentos.add(a);
 	}
 
-	//Funcao que retorna a ArrayList de apartamentos
+	
+	/** 
+	 * @return Funcao que retorna a ArrayList de apartamentos
+	 */
 	public ArrayList<Apartamento> getLista() {
 		return listaApartamentos;
 	}
 	
-	//Funcao que cria lista de nomes dos apartamentos
+	/** 
+	 * @return Funcao que cria lista de nomes dos apartamentos
+	 */
 	public String[] getListaNomesApt() {
 		String[] nomesApt = new String[listaApartamentos.size()];
 		int i = 0;

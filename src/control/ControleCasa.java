@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 import model.Casa;
 
+	/** 
+	 * @param Construtor da classe ControleCasa
+	 */
 public class ControleCasa {
 
 	ArrayList<Casa> listaCasas = new ArrayList<Casa>();
@@ -23,17 +26,26 @@ public class ControleCasa {
 
 	}
 
-	// Funcao que cadastra um Imovel a ArrayList de Imoveis
+	
+	/** 
+	 * @param Funcao que cadastra uma casa a ArrayList de Casas
+	 */
 	public void cadastraCasa(Casa c) {
 		listaCasas.add(c);
 	}
 
-	//Funcao que retorna a ArrayList de casas
+	
+	/** 
+	 * @return Funcao que retorna a ArrayList de casas
+	 */
 	public ArrayList<Casa> getLista() {
 		return listaCasas;
 	}
 
-	//Funcao que retorna vetor com nomes das casas
+	
+	/** 
+	 * @return Funcao que retorna vetor com nomes das casas
+	 */
 	public String[] getListaNomesCasa() {
 		String[] nomesCasas = new String[listaCasas.size()];
 		int i = 0;

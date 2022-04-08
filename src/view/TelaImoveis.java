@@ -37,6 +37,11 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 
 	private static int i;
 
+	
+	/** 
+	 * @param conta
+	 * @param contc
+	 */
 	public void Tela(ControleApartamento conta, ControleCasa contc) {
 		cta = conta;
 		ctc = contc;
@@ -98,6 +103,10 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		btnCadastrarCs.addActionListener(this);
 	}
 
+	
+	/** 
+	 * @return JList<String>
+	 */
 	public JList<String> retornaListaApt() {
 
 		int p = i;
@@ -105,6 +114,10 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 
 	}
 
+	
+	/** 
+	 * @param Funcao que 
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
@@ -150,6 +163,10 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 
 	}
 
+	
+	/** 
+	 * @param Funcao para pegar o index da lista selecionada
+	 */
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
 		Object src = e.getSource();

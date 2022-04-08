@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 import model.Usuario;
 
+	/** 
+	 * @param Construtor da classe ControleUsuario
+	 */
 public class ControleUsuario {
 
 	ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
@@ -24,17 +27,26 @@ public class ControleUsuario {
 
 	}
 
-	// Funcao que cadastra um Usuario a ArrayList de Usuarios
+	
+	/** 
+	 * @param Funcao que cadastra um Usuario a ArrayList de Usuarios
+	 */
 	public void cadastraUsuario(Usuario u) {
 		listaUsuarios.add(u);
 	}
 
-	// Funcao que retorna a quantidade de Usuarios que estao cadastrados
+	
+	/** 
+	 * @return Funcao que retorna a quantidade de Usuarios que estao cadastrados
+	 */
 	public String numeroDeUsuarios() {
 		return listaUsuarios.size() + " Usuarios cadastrados";
 	}
 
-	//Funcao que cria lista de nomes
+	
+	/** 
+	 * @return Funcao que cria lista de nomes
+	 */
 	public String[] getListaNomes() {
 		String[] nomes = new String[listaUsuarios.size()];
 		int i = 0;
@@ -45,6 +57,10 @@ public class ControleUsuario {
 		return nomes;
 	}
 
+	
+	/** 
+	 * @return Funcao que retorna ArrayList de Usuarios
+	 */
 	public ArrayList<Usuario> listarUsuarios() {
 		return listaUsuarios;
 	}
