@@ -121,7 +121,7 @@ public class TelaCadastroImovel implements ActionListener {
 		tfCon.setBounds(250, 150, 150, 20);
 		var.setBounds(250, 170, 150, 20);
 		tfVar.setBounds(250, 190, 150, 20);
-		salvarAp.setBounds(160, 220, 100, 30);
+		salvarAp.setBounds(160, 220, 150, 30);
 
 		janela.setSize(500, 300);
 		janela.setVisible(true);
