@@ -29,6 +29,9 @@ public class TelaReserva implements ActionListener, ListSelectionListener {
 	private JList<String> listaImovelReserva = new JList<String>();
 	int i;
 
+	/** 
+	 * @param Construtor da Classe tela reserva
+	 */
 	public TelaReserva(ControleReserva cont) {
 
 		ctr = cont;
@@ -88,6 +91,10 @@ public class TelaReserva implements ActionListener, ListSelectionListener {
 
 	}
 
+	
+	/** 
+	 * @param Funcao que cria evento a partir do botao selecionado
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
@@ -103,6 +110,10 @@ public class TelaReserva implements ActionListener, ListSelectionListener {
 		}
 	}
 
+	
+	/** 
+	 * @param Funcao para armazenar o index da lista selecionada
+	 */
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
 		// TODO Auto-generated method stub

@@ -39,8 +39,9 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 
 	
 	/** 
-	 * @param conta
-	 * @param contc
+	 * @param Funcao que constroi a tela de imoveis
+	 * 
+	 * @param 
 	 */
 	public void Tela(ControleApartamento conta, ControleCasa contc) {
 		this.cta = conta;
@@ -107,20 +108,8 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		
 	}
 
-	
 	/** 
-	 * @return JList<String>
-	 */
-	public JList<String> retornaListaApt() {
-
-		int p = i;
-		return listaAptCadastrados;
-
-	}
-
-	
-	/** 
-	 * @param Funcao que 
+	 * @param Funcao que cria um evento a partir do botao selecionado
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {

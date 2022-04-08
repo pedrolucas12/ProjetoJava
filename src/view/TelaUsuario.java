@@ -47,6 +47,10 @@ public class TelaUsuario implements ActionListener, ListSelectionListener {
 	private static ControleUsuario ctu;
 	int i;
 
+	
+	/** 
+	 * @param Funcao que gera a Tela Usuario
+	 */
 	public void Tela(ControleUsuario cont) {
 		ctu = cont;
 
@@ -104,8 +108,9 @@ public class TelaUsuario implements ActionListener, ListSelectionListener {
 		scrollPane.setViewportView(listaUsuariosCadastrados);
 
 	}
-
-	// Funcao que cadastra Usuario
+	/** 
+	 * @param Funcao que cadastra Usuario
+	 */ 
 	public void salvarUsuario() {
 		String nome = tfNome.getText();
 		String cpf = tfCpf.getText();
@@ -119,7 +124,7 @@ public class TelaUsuario implements ActionListener, ListSelectionListener {
 
 		numUsersCadastrados.setText(ctu.numeroDeUsuarios());
 
-		JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso");
+		JOptionPane.showMessageDialog(null, "Usuï¿½rio cadastrado com sucesso");
 		
 		tfNome.setText("");
 		tfCpf.setText("");
@@ -129,6 +134,10 @@ public class TelaUsuario implements ActionListener, ListSelectionListener {
 
 	}
 
+	
+	/** 
+	 * @param Funcao que cria evento a partir do botao selecionado
+	 */
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 
@@ -154,6 +163,10 @@ public class TelaUsuario implements ActionListener, ListSelectionListener {
 
 	}
 
+	
+	/** 
+	 * @param Funcao para armazenar o index da lista selecionada
+	 */
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
 		Object src = e.getSource();

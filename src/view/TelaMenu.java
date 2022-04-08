@@ -9,9 +9,6 @@ import control.ControleReserva;
 import control.ControleUsuario;
 
 
-	/** 
-	 * @param Declara e configura toda a tela de menu
-	 */
 public class TelaMenu implements ActionListener {
 
 	
@@ -63,7 +60,7 @@ public class TelaMenu implements ActionListener {
 
 	
 	/** 
-	 * @param funcoes dos botoes
+	 * @param Funcao que cria evento a partir do botao selecionado
 	 */
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();

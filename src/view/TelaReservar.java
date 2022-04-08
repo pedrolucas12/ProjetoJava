@@ -48,6 +48,9 @@ public class TelaReservar implements ActionListener {
 	private static int x;
 	private static int y;
 
+	/** 
+	 * @param Construtor da tela reservar
+	 */
 	public TelaReservar() {
 		checkin.setBounds(20, 30, 100, 40);
 		checkout.setBounds(20, 70, 100, 40);
@@ -79,6 +82,9 @@ public class TelaReservar implements ActionListener {
 
 	}
 
+	/** 
+	 * @param Funcao para salvar a reserva do apartamento
+	 */
 	public void salvarReservaApt() {
 
 		String checkin = tfCheckin.getText();
@@ -120,6 +126,10 @@ public class TelaReservar implements ActionListener {
 		}
 	}
 
+	
+	/** 
+	 * @param Funcao que cria evento a partir do botao selecionado
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
