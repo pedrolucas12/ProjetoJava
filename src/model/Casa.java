@@ -8,7 +8,7 @@ public class Casa extends Imovel {
 	private int andar;
 
 	public Casa(String n,  String end, double val,  int h, int q, int b, int c, 
-			char pis, int and) {
+			int i, int and) {
 
 		this.nome = n;
 
@@ -19,7 +19,7 @@ public class Casa extends Imovel {
 		this.qtdBanheiros = b;
 		this.qtdCamas = c;
 		this.qtdQuartos = q;
-		this.piscina = pis;;
+		this.piscina = i;;
 		this.andar = and;
 		
 

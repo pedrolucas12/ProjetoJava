@@ -24,7 +24,6 @@ public class ControleUsuario {
 		listaUsuarios.add(u3);
 		listaUsuarios.add(u4);
 		listaUsuarios.add(u5);
-
 	}
 
 	
