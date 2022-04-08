@@ -118,7 +118,7 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		if (src == btnReservarAp) {
 			
 			janela.dispose();
-			new TelaReservar();
+			new TelaReservar().TelaReservarApt();
 			listaAptCadastrados.updateUI();
 
 		}
@@ -126,7 +126,7 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 			
 			janela.dispose();
 			
-			new TelaReservar();
+			new TelaReservar().TelaReservarCs();
 
 		}
 		if (src == btnExcluirApt) {
