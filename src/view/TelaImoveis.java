@@ -98,8 +98,8 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		btnReservarCs.addActionListener(this);
 		btnExcluirApt.addActionListener(this);
 		btnExcluirCs.addActionListener(this);
-		btnAlterarApt.addActionListener(this);
-		btnAlterarCs.addActionListener(this);
+		btnAtualizarApt.addActionListener(this);
+		btnAtualizarCs.addActionListener(this);
 		btnCadastrarApt.addActionListener(this);
 		btnCadastrarCs.addActionListener(this);
 		
@@ -118,7 +118,7 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		if (src == btnReservarAp) {
 			
 			janela.dispose();
-			new TelaReservar();
+			new TelaReservar().TelaReservarApt();
 			listaAptCadastrados.updateUI();
 
 		}
@@ -126,7 +126,7 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 			
 			janela.dispose();
 			
-			new TelaReservar();
+			new TelaReservar().TelaReservarCs();
 
 		}
 		if (src == btnExcluirApt) {
@@ -145,14 +145,17 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 
 			}
 		}
-		if (src == btnAlterarApt) {
+		if (src == btnAtualizarApt) {
 			listaAptCadastrados.setListData(cta.getListaNomesApt());
 			listaAptCadastrados.updateUI();
 			listaCasasCadastradas.setListData(ctc.getListaNomesCasa());
 			listaCasasCadastradas.updateUI();
 		}
-		if (src == btnAlterarCs) {
-			
+		if (src == btnAtualizarCs) {
+			listaAptCadastrados.setListData(cta.getListaNomesApt());
+			listaAptCadastrados.updateUI();
+			listaCasasCadastradas.setListData(ctc.getListaNomesCasa());
+			listaCasasCadastradas.updateUI();
 		}
 		if (src == btnCadastrarApt) {
 			janela.dispose();
@@ -180,7 +183,7 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 
 		if (src == listaAptCadastrados) {
 			i = listaAptCadastrados.getSelectedIndex();
-			retornaListaApt();
+			
 
 		}
 		if (src == listaCasasCadastradas) {
