@@ -11,9 +11,9 @@ import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import control.ControlApartamento;
-import control.ControlCasa;
-import control.ControlReserva;
+import control.ControleApartamento;
+import control.ControleCasa;
+import control.ControleReserva;
 import control.ControleUsuario;
 import model.Apartamento;
 import model.Reserva;
@@ -38,9 +38,9 @@ public class TelaReservar implements ActionListener  {
 	private static Apartamento a;
 
 	private static ControleUsuario ctu = new ControleUsuario();
-	private static ControlApartamento cta = new ControlApartamento();
-	private static ControlCasa ctc = new ControlCasa();
-	private static ControlReserva ctr = new ControlReserva();
+	private static ControleApartamento cta = new ControleApartamento();
+	private static ControleCasa ctc = new ControleCasa();
+	private static ControleReserva ctr = new ControleReserva();
 
 	private static String listaU[];
 	private static String listaA[];

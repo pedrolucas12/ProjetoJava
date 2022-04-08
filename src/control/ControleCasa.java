@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 import model.Casa;
 
-public class ControlCasa {
+public class ControleCasa {
 
 	ArrayList<Casa> listaCasas = new ArrayList<Casa>();
 
-	public ControlCasa() {
+	public ControleCasa() {
 		Casa c1 = new Casa("Casa Fortaleza", "Rua 5",105.0, 1,1,1,1, 's', 2);
 		Casa c2 = new Casa("Casa Santa Catarina", "Rua 5",100.0, 1,1,1,1, 's', 2);
 		Casa c3 = new Casa("Casa Itacare", "Rua 5",205.0, 1,1,1,1, 's', 2);

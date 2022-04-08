@@ -9,8 +9,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import control.ControlApartamento;
-import control.ControlCasa;
+import control.ControleApartamento;
+import control.ControleCasa;
 import model.Apartamento;
 import model.Casa;
 
@@ -44,8 +44,8 @@ public class TelaCadastroImovel implements ActionListener {
 	private JTextField tfAnd = new JTextField();
 	private JTextField tfPis = new JTextField();
 
-	private static ControlApartamento cta;
-	private static ControlCasa ctc;
+	private static ControleApartamento cta = new ControleApartamento();
+	private static ControleCasa ctc = new ControleCasa();
 
 	public void CadastroCasa() {
 		qtdH.setBounds(20, 10, 150, 20);

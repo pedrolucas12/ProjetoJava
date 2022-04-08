@@ -11,12 +11,12 @@ import javax.swing.JScrollPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import control.ControlReserva;
+import control.ControleReserva;
 
 public class TelaReserva implements ActionListener, ListSelectionListener {
 
 	private static JFrame janela = new JFrame();
-	private static ControlReserva ctr;
+	private static ControleReserva ctr;
 	private static JButton excluir = new JButton("Excluir Reserva");
 	private static JButton a = new JButton("Alterar Reserva");
 	private static JLabel u = new JLabel("Usuario");
@@ -29,7 +29,7 @@ public class TelaReserva implements ActionListener, ListSelectionListener {
 	private JList<String> listaImovelReserva = new JList<String>();
 	int i;
 
-	public TelaReserva(ControlReserva cont) {
+	public TelaReserva(ControleReserva cont) {
 
 		ctr = cont;
 

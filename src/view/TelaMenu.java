@@ -3,9 +3,9 @@ package view;
 import java.awt.event.*;
 import javax.swing.*;
 
-import control.ControlApartamento;
-import control.ControlCasa;
-import control.ControlReserva;
+import control.ControleApartamento;
+import control.ControleCasa;
+import control.ControleReserva;
 import control.ControleUsuario;
 
 
@@ -22,9 +22,9 @@ public class TelaMenu implements ActionListener {
 	
 	private static JLabel t = new JLabel("MENU");
 	private static ControleUsuario ctu = new ControleUsuario();
-	private static ControlApartamento cta = new ControlApartamento();
-	private static ControlCasa ctc = new ControlCasa();
-	private static ControlReserva ctr = new ControlReserva();
+	private static ControleApartamento cta = new ControleApartamento();
+	private static ControleCasa ctc = new ControleCasa();
+	private static ControleReserva ctr = new ControleReserva();
 
 	/** 
 	 * @param Funcao que constroi a tela menu

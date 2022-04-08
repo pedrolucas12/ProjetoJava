@@ -6,12 +6,12 @@ import model.Casa;
 import model.Reserva;
 import model.Usuario;
 
-public class ControlReserva {
+public class ControleReserva {
 
 	ArrayList<Reserva> listaReservas = new ArrayList<Reserva>();
 	
 
-	public ControlReserva() {
+	public ControleReserva() {
 		Reserva r1 = new Reserva("Fernando", "19/07/2022", "24/07/2022", "Apartamento Brasilia");
 		Reserva r2 = new Reserva("Lucas", "19/07/2022", "24/07/2022", "Casa Santos");
 		Reserva r3 = new Reserva("Felipe", "19/07/2022", "24/07/2022", "Casa Ouro Preto");

@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import model.Apartamento;
 import model.Usuario;
 
-public class ControlApartamento {
+public class ControleApartamento {
 
 	ArrayList<Apartamento> listaApartamentos = new ArrayList<Apartamento>();
 
-	public ControlApartamento() {
+	public ControleApartamento() {
 		Apartamento a1 = new Apartamento("Apartamento Brasilia", "SQSW", 10.0, 2,2,2,2, 's','s','s');
 		Apartamento a2 = new Apartamento("Apartamento Balneario","SQSW", 90.0, 2,2,2,2, 's','s','s');
 		Apartamento a3 = new Apartamento("Apartamento Curitiba", "SQSW",50.0, 2,2,2,2, 's','s','s');

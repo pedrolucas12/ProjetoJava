@@ -11,8 +11,8 @@ import javax.swing.JScrollPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import control.ControlApartamento;
-import control.ControlCasa;
+import control.ControleApartamento;
+import control.ControleCasa;
 import control.ControleUsuario;
 
 public class TelaImoveis implements ActionListener, ListSelectionListener {
@@ -32,12 +32,12 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 	private JList<String> listaAptCadastrados = new JList<String>();
 	private JList<String> listaCasasCadastradas = new JList<String>();
 
-	private static ControlApartamento cta;
-	private static ControlCasa ctc;
+	private static ControleApartamento cta;
+	private static ControleCasa ctc;
 
 	private static int i;
 
-	public void Tela(ControlApartamento conta, ControlCasa contc) {
+	public void Tela(ControleApartamento conta, ControleCasa contc) {
 		cta = conta;
 		ctc = contc;
 
@@ -111,9 +111,7 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 
 		if (src == btnReservarAp) {
 			new TelaReservar();
-			if (i >= 0) {
-				cta.getLista().get(i);
-			}
+			
 
 		}
 		if (src == btnReservarCs) {
@@ -144,6 +142,7 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		}
 		if (src == btnCadastrarApt) {
 			new TelaCadastroImovel().CadastroApartamento();
+			
 		}
 		if (src == btnCadastrarCs) {
 			new TelaCadastroImovel().CadastroCasa();
