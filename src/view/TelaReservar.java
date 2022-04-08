@@ -19,7 +19,7 @@ import model.Apartamento;
 import model.Reserva;
 import model.Usuario;
 
-public class TelaReservar implements ActionListener  {
+public class TelaReservar implements ActionListener {
 
 	int i = 0;
 	private static JFrame janela = new JFrame();
@@ -73,7 +73,7 @@ public class TelaReservar implements ActionListener  {
 		janela.add(tfApt);
 		janela.add(salvar);
 		janela.setLayout(null);
-		//janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		salvar.addActionListener(this);
 
@@ -91,16 +91,15 @@ public class TelaReservar implements ActionListener  {
 		x = 0;
 
 		for (int i = 0; i < listaU.length; i++) {
-			
 
 			if (sUsuario.equalsIgnoreCase(listaU[i])) {
 				x = 1;
-				
+
 				break;
 			}
 
 		}
-		
+
 		if (x == 1) {
 			for (int i = 0; i < listaA.length; i++) {
 				if (sApt.equalsIgnoreCase(listaA[i])) {
@@ -113,10 +112,10 @@ public class TelaReservar implements ActionListener  {
 				}
 			}
 
-		}else {
+		} else {
 			JOptionPane.showMessageDialog(null, "Usuario nao encontrado");
 		}
-		if(y != 1) {
+		if (y != 1) {
 			JOptionPane.showMessageDialog(null, "Apartamento nao encontrado");
 		}
 	}
@@ -126,12 +125,12 @@ public class TelaReservar implements ActionListener  {
 		Object src = e.getSource();
 
 		if (src == salvar) {
+
 			salvarReservaApt();
-			new TelaMenu();
+			janela.dispose();
+			new TelaReserva(ctr);
 		}
 
 	}
-
-	
 
 }

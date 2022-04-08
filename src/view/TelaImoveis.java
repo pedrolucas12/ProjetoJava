@@ -25,8 +25,8 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 	private static JLabel ca = new JLabel("Casas");
 	private static JButton btnExcluirApt = new JButton("Excluir apartamento");
 	private static JButton btnExcluirCs = new JButton("Excluir casa");
-	private static JButton btnAlterarApt = new JButton("Alterar apartamento");
-	private static JButton btnAlterarCs = new JButton("Alterar casa");
+	private static JButton btnAtualizarApt = new JButton("Atualizar");
+	private static JButton btnAtualizarCs = new JButton("Atualizar");
 	private static JButton btnCadastrarApt = new JButton("Cadastrar apartamento");
 	private static JButton btnCadastrarCs = new JButton("Cadastrar casa");
 	private JList<String> listaAptCadastrados = new JList<String>();
@@ -43,8 +43,8 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 	 * @param contc
 	 */
 	public void Tela(ControleApartamento conta, ControleCasa contc) {
-		cta = conta;
-		ctc = contc;
+		this.cta = conta;
+		this.ctc = contc;
 
 		listaAptCadastrados.setListData(cta.getListaNomesApt());
 		JScrollPane scrollPaneApt = new JScrollPane();
@@ -61,9 +61,9 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		ca.setBounds(400, 5, 100, 40);
 
 		btnExcluirApt.setBounds(40, 420, 200, 40);
-		btnAlterarApt.setBounds(40, 480, 200, 40);
+		btnAtualizarApt.setBounds(40, 480, 200, 40);
 		btnExcluirCs.setBounds(330, 420, 200, 40);
-		btnAlterarCs.setBounds(330, 480, 200, 40);
+		btnAtualizarCs.setBounds(330, 480, 200, 40);
 		btnCadastrarApt.setBounds(40, 540, 200, 40);
 		btnCadastrarCs.setBounds(330, 540, 200, 40);
 
@@ -71,9 +71,9 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		janela.setVisible(true);
 
 		janela.add(btnExcluirApt);
-		janela.add(btnAlterarApt);
+		janela.add(btnAtualizarApt);
 		janela.add(btnExcluirCs);
-		janela.add(btnAlterarCs);
+		janela.add(btnAtualizarCs);
 		janela.add(btnReservarAp);
 		janela.add(btnCadastrarCs);
 		janela.add(btnCadastrarApt);
@@ -101,6 +101,10 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		btnAlterarCs.addActionListener(this);
 		btnCadastrarApt.addActionListener(this);
 		btnCadastrarCs.addActionListener(this);
+		
+		listaAptCadastrados.updateUI();
+		listaCasasCadastradas.updateUI();
+		
 	}
 
 	
@@ -123,11 +127,16 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 		Object src = e.getSource();
 
 		if (src == btnReservarAp) {
-			new TelaReservar();
 			
+			janela.dispose();
+			new TelaReservar();
+			listaAptCadastrados.updateUI();
 
 		}
 		if (src == btnReservarCs) {
+			
+			janela.dispose();
+			
 			new TelaReservar();
 
 		}
@@ -148,17 +157,26 @@ public class TelaImoveis implements ActionListener, ListSelectionListener {
 			}
 		}
 		if (src == btnAlterarApt) {
-
+			listaAptCadastrados.setListData(cta.getListaNomesApt());
+			listaAptCadastrados.updateUI();
+			listaCasasCadastradas.setListData(ctc.getListaNomesCasa());
+			listaCasasCadastradas.updateUI();
 		}
 		if (src == btnAlterarCs) {
-
+			
 		}
 		if (src == btnCadastrarApt) {
+			janela.dispose();
 			new TelaCadastroImovel().CadastroApartamento();
+			listaAptCadastrados.setListData(cta.getListaNomesApt());
+			listaAptCadastrados.updateUI();
 			
 		}
 		if (src == btnCadastrarCs) {
+			janela.dispose();
 			new TelaCadastroImovel().CadastroCasa();
+			listaCasasCadastradas.setListData(ctc.getListaNomesCasa());
+			listaCasasCadastradas.updateUI();
 		}
 
 	}

@@ -252,11 +252,13 @@ public class TelaCadastroImovel implements ActionListener {
 
 		if (src == salvarAp) {
 			CadastrarApt();
-			new TelaMenu();
+			janela.dispose();
+			new TelaImoveis().Tela(cta, ctc);
 		}
 		if (src == salvarCs) {
 			CadastrarCasa();
-			new TelaMenu();
+			janela.dispose();
+			new TelaImoveis().Tela(cta, ctc);
 
 		}
 	}
