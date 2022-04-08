@@ -44,11 +44,12 @@ public class TelaReservar implements ActionListener {
 
 	private static String listaU[];
 	private static String listaA[];
+	private static String listaC[];
 
 	private static int x;
 	private static int y;
 
-	/** 
+	/**
 	 * @param Construtor da tela reservar
 	 */
 	public TelaReservar() {
@@ -82,7 +83,7 @@ public class TelaReservar implements ActionListener {
 
 	}
 
-	/** 
+	/**
 	 * @param Funcao para salvar a reserva do apartamento
 	 */
 	public void salvarReservaApt() {
@@ -126,8 +127,7 @@ public class TelaReservar implements ActionListener {
 		}
 	}
 
-	
-	/** 
+	/**
 	 * @param Funcao que cria evento a partir do botao selecionado
 	 */
 	@Override

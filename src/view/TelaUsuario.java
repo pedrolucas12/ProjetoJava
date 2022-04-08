@@ -124,7 +124,7 @@ public class TelaUsuario implements ActionListener, ListSelectionListener {
 
 		numUsersCadastrados.setText(ctu.numeroDeUsuarios());
 
-		JOptionPane.showMessageDialog(null, "Usu�rio cadastrado com sucesso");
+		JOptionPane.showMessageDialog(null, "Usuario cadastrado com sucesso");
 		
 		tfNome.setText("");
 		tfCpf.setText("");
